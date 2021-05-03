@@ -63,7 +63,8 @@ $Theme-Spacing-Top-No-Announcement: {{ settings.siteHeader-top-row-height }} + {
 
 
 .MainContent {
-  margin-top: 0px
+  margin-top: 0px;
+  padding-top: 115px;
 }
 
 .MainContent-site_header--fixed {
@@ -74,12 +75,3 @@ $Theme-Spacing-Top-No-Announcement: {{ settings.siteHeader-top-row-height }} + {
 }
 
 
-//Setting margin bottom (space between sections)
-.MainContent .shopify-section {
-    margin-bottom: 100px;
-}
-@media screen and (max-width: 768px){
-    .MainContent .shopify-section {
-        margin-bottom: 80px;
-    }
-}

@@ -36,7 +36,9 @@ $SiteHeader--z_index: {{ settings.siteHeader-z-index }};
 @import "contact.scss";
 
 .SiteHeader {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     margin: 0;
 
@@ -46,6 +48,8 @@ $SiteHeader--z_index: {{ settings.siteHeader-z-index }};
     z-index: $SiteHeader--z_index;
 
     transition: margin 0.5s;
+
+    z-index: 1000;
 }
 
 .SiteHeader--fixed {

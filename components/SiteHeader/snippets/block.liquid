@@ -1,20 +1,32 @@
 <div {{block.shopify_attributes}}>
     {% case block.type %}
 
-
         {% when 'menu' %}
             <ul class="NavMenu NavMenu--main_menu">
                 {% for link in linklists[block.settings.linklist].links %}
                     {% capture child_list_handle %}{{link.title | handleize }}{% endcapture %}
                     {% capture link_id %}SiteHeader-link--{{block.settings.linklist}}_{{link.title | handleize}}{% endcapture %}
-                    {% if menus[child_list_handle] != blank %}
+                    {% if link.links != blank %}
                         <li class="NavMenu-link NavMenu--main_menu-link">
                             <a data-toggle="offcanvas" data-target="#{{ link_id }}" href="{{link.url}}"><span>{{ link.title }}</span> <span class="NavMenu-link--arrow"></span></a>
                             <div class="Offcanvas Offcanvas--lv2 SiteHeader-dropdown is-Offcanvas--closed" id="{{ link_id }}">
                                 <div class="Offcanvas-scroller">
                                     <ul class="NavMenu NavMenu--dropdown">
-                                        {% for link in linklists[child_list_handle].links %}
-                                            <li class="NavMenu-link NavMenu--dropdown-link"><a href="{{ link.href }}"><span>{{ link.title }}</span></a></li>
+                                        {% for child_link in link.links %} 
+                                            {% if child_link.type == 'collection_link' %}
+                                                {% assign linkCollection = child_link.object %}
+                                                    <li>
+                                                        <a href="{{ linkCollection.url }}">
+                                                        {% if linkCollection.image %}
+                                                        <img src="{{ linkCollection.image | img_url: 'medium' }}" alt="{{linkCollection.title }}"/>
+                                                        {% endif %}
+                                                        <span>{{linkCollection.title }}</span>
+                                                        </a>
+                                                    </li>
+                                            {% else%}
+                                                    <li class="NavMenu-link NavMenu--dropdown-link">
+                                                    <a href="{{ child_link.url }}"><span>{{ child_link.title }}</span></a></li>
+                                            {% endif %}        
                                         {% endfor %}
                                     </ul>
                                 </div>
@@ -27,7 +39,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-
 
         {% when 'accounts' %}
             {% if shop.customer_accounts_enabled %}
@@ -71,7 +82,6 @@
                 <!-- Accounts are disabled. Cannot render menu. -->
             {% endif %}
 
-
         {% when 'cart' %}
             <div class="SiteHeader-cart">
                 <a class="SiteHeader-Icon SiteHeader-cart_button" href="/cart"
@@ -99,13 +109,13 @@
                     </template>
                 {% endif %}
             </div>
+
         {% when 'search' %}
             <div class="SiteHeader-Icon SiteHeader-search">
                 <a href="/search" class="SiteHeader-search-link">
                     <img src="{{ block.settings.search-icon | img_url: 'original' }}" class="SiteHeader-search-icon"/>
                 </a>
             </div>
-
 
         {% when 'hilight-button' %}
             <div class="SiteHeader-Icon SiteHeader-hilight_botton_wrap">
@@ -115,7 +125,6 @@
                     </a>
                 </div>
             </div>
-
             
     {% endcase %}
 </div>

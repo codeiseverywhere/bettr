@@ -1,0 +1,157 @@
+/* Default Theme Styling */
+
+/* Font Family */
+$defaultFam: Montserrat;
+
+/* Colors */
+$black: #000000; 
+$grey: #1D1E20; 
+$halfWhite: #E5E7EA;
+$white: #ffffff; 
+$textGrey: #7D7F81;
+
+/* Typography */
+html {
+	body {
+		h1, h2, h3, h4, h5 {
+		 	font-family: $defaultFam;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		p, ul li, ol li {
+			font-family: $defaultFam;
+			font-weight: normal;
+			letter-spacing: 0.5px;
+		}
+		ul, ol {
+			li {
+				font-size: 18px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px){
+	html {
+		body {
+			h1 {
+				font-size: 40px;	
+				line-height: 52px;	
+			}
+			h2 {
+				font-size: 32px;
+				line-height: 52px;
+			}
+			h3 {
+				font-size: 28px;
+				line-height: 37px;
+			}
+			h4 {
+				font-size: 24px;
+				line-height: 32px;
+			}
+			h5 {
+				font-size: 12px;
+				line-height: 15px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px){	
+	html {
+		body {
+			h1 {
+				font-size: 30px;
+				line-height: 39px;		
+			}
+			h2 {
+				font-size: 28px;
+				line-height: 37px;
+			}
+			h3 {
+				font-size: 24px;
+				line-height: 32px;
+			}
+			h4 {
+				font-size: 18px;
+				line-height: 24px;
+			}
+			h5 {
+				font-size: 12px;
+				line-height: 15px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 28px;
+			}
+		}
+	}
+}
+
+/* Section Spacing */ 
+.section-space {
+	display: block;
+	@media screen and (min-width: 768px){
+		height: 120px;
+	}
+	@media screen and (max-width: 768px){
+		height: 80px;
+	}
+}
+
+/* Buttons and Inputs */ 
+.site-btn,
+.ctaBlack,
+.ctaDefault {	
+	font-family: $defaultFam;
+	font-size: 12px;
+	line-height: 50px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: center;
+	display: inline-block;	
+	min-width: 263px;
+	text-transform: uppercase;
+}
+.site-btn,
+.ctaDefault {
+	color: $black;
+	background-color: $white;
+	border: 1px solid $white;	
+}
+.site-btn:hover,
+.ctaDefault:hover {
+	color: $white;
+	background-color: $black 
+}
+.ctaBlack {
+	color: $white;	
+	background-color: $black;
+	border: 1px solid $black;
+}
+.ctaBlack:hover {
+	color: $black;	
+	background-color: $white;
+}
+
+/* Animations and Other snippets */ 
+.ease03s {
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	transition: all ease 0.3s; 
+}
+.translateY50 {
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%); 
+}

@@ -26,12 +26,3 @@ $Button--border_width: $Border-width--normal;
   appearance: none;
   padding: $Button--padding;
 }
-
-.site-btn {
-  background-color: #000;
-  color: #fff;
-}
-.site-btn:hover {
-  background-color: #fff003 !important;
-  color: #000;
-}

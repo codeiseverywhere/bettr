@@ -27,3 +27,13 @@
 
     update_scroll();
 }));
+
+function searchToggle(){
+    $('.SiteHeader-search-link').click(function(e){
+        e.preventDefault();
+        $('#main-searchbar').toggleClass('search-open');
+    })
+}
+$(document).ready(function(){
+    searchToggle();
+});

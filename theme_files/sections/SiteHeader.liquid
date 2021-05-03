@@ -83,6 +83,17 @@
                         {% endfor %}
                     </nav>
                 {% endif %}
+
+                <div class="searchbar" id="main-searchbar">
+                    <div class="searchbar-inner">
+                        {{ 'Search-1.png' | asset_url | img_tag: 'Search' }}
+                        <form>
+                            <input type="text" placeholder="Search">
+                            <button type="submit">
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

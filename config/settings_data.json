@@ -1,0 +1,269 @@
+{
+  "current": {
+    "headline-large-font": "montserrat_n4",
+    "headline-small-font": "montserrat_n4",
+    "paragraph-btn-font": "montserrat_n4",
+    "paragraph-font": "montserrat_n4",
+    "h1-mobile-font-size": "30px",
+    "h1-desktop-letter-spacing": "1px",
+    "h1-mobile-letter-spacing": "1px",
+    "h2-desktop-font-size": "32px",
+    "h2-mobile-font-size": "28px",
+    "h2-desktop-letter-spacing": "1px",
+    "h2-mobile-letter-spacing": "1px",
+    "h3-desktop-font-size": "28px",
+    "h3-mobile-font-size": "24px",
+    "h3-desktop-letter-spacing": "1px",
+    "h3-mobile-letter-spacing": "1px",
+    "h4-desktop-font-size": "24px",
+    "h4-mobile-font-size": "18px",
+    "h4-desktop-letter-spacing": "1px",
+    "h4-mobile-letter-spacing": "1px",
+    "h5-desktop-font-size": "12px",
+    "h5-mobile-font-size": "12px",
+    "h5-desktop-letter-spacing": "1px",
+    "h5-mobile-letter-spacing": "1px",
+    "h6-desktop-font-size": "12px",
+    "h6-mobile-font-size": "12px",
+    "h6-desktop-letter-spacing": "1px",
+    "h6-mobile-letter-spacing": "1px",
+    "p-letter-spacing": ".50px",
+    "p-small-letter-spacing": ".50px",
+    "color_accent-2": "#ffffff",
+    "color-site-background": "#000",
+    "color_body_text_black": "#ffffff",
+    "bg-color_site-header": "#000",
+    "bg-color_site-header-bottom": "#1d1e20",
+    "color_footer_top-bg": "#000000",
+    "color_footer_bottom-bg": "#000",
+    "color_footer_text_top": "#FFF",
+    "sections": {
+      "SiteHeader": {
+        "type": "SiteHeader",
+        "blocks": {
+          "73fafc72-9b9d-4dbb-afe7-b5c76405b42b": {
+            "type": "menu",
+            "settings": {
+              "location": "second_menu",
+              "linklist": "top-left"
+            }
+          },
+          "e23a16e9-3f7b-4764-940e-78bc9a325b66": {
+            "type": "menu",
+            "settings": {
+              "location": "third_menu",
+              "linklist": "main-menu"
+            }
+          },
+          "c82794d6-0d00-4282-b222-d16a8e67ce78": {
+            "type": "search",
+            "settings": {
+              "location": "first_menu",
+              "search-icon": "shopify:\/\/shop_images\/navigation_icon_-_search_-_white.png"
+            }
+          },
+          "71f02bf7-e841-4829-abd7-059834a080a6": {
+            "type": "accounts",
+            "settings": {
+              "location": "first_menu",
+              "exposed": false,
+              "account-icon": "shopify:\/\/shop_images\/navigation_icon_-_account.png"
+            }
+          },
+          "0ae055b2-1314-4dd2-ae71-452c27899a1a": {
+            "type": "cart",
+            "settings": {
+              "location": "first_menu",
+              "cart-icon": "shopify:\/\/shop_images\/navigation_icon_-_cart.png",
+              "use-minicart": false,
+              "cart-count": true,
+              "cart-notification-bg-color": "#eaeaea",
+              "cart-notification-text-color": "#000000"
+            }
+          }
+        },
+        "block_order": [
+          "73fafc72-9b9d-4dbb-afe7-b5c76405b42b",
+          "e23a16e9-3f7b-4764-940e-78bc9a325b66",
+          "c82794d6-0d00-4282-b222-d16a8e67ce78",
+          "71f02bf7-e841-4829-abd7-059834a080a6",
+          "0ae055b2-1314-4dd2-ae71-452c27899a1a"
+        ],
+        "settings": {
+          "header-logo": "shopify:\/\/shop_images\/bettr-logo.png"
+        }
+      },
+      "SiteFooter": {
+        "type": "SiteFooter",
+        "blocks": {
+          "e078e99b-f837-4fb7-ba12-0d4f041e810e": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_1.png",
+              "our_promise_heading": "24\/7\/364 <br> Customer Support"
+            }
+          },
+          "59e68617-65ce-462f-a7e7-751c53d7cc01": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_2.png",
+              "our_promise_heading": "USA FAST <br> FREE SHIPPING"
+            }
+          },
+          "fdf5c148-e11e-45bf-b39d-9d725a178315": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_3.png",
+              "our_promise_heading": "Worldwide Delivery to 168 Countries"
+            }
+          },
+          "51b6ab89-a607-49a2-b6d4-a63e4bfffe04": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_4.png",
+              "our_promise_heading": "30 Day Money Back Guarantee"
+            }
+          },
+          "328206f0-0a49-4791-97ec-e1e052a232d8": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_5.png",
+              "our_promise_heading": "100% Safe & Secure Checkout"
+            }
+          },
+          "6d7d890a-a300-4aaf-a648-616b50160819": {
+            "type": "our_promise",
+            "settings": {
+              "our_promise_icon": "shopify:\/\/shop_images\/Home-Desktop-Footer_icon_-_6.png",
+              "our_promise_heading": "Hassle-Free Returns"
+            }
+          }
+        },
+        "block_order": [
+          "e078e99b-f837-4fb7-ba12-0d4f041e810e",
+          "59e68617-65ce-462f-a7e7-751c53d7cc01",
+          "fdf5c148-e11e-45bf-b39d-9d725a178315",
+          "51b6ab89-a607-49a2-b6d4-a63e4bfffe04",
+          "328206f0-0a49-4791-97ec-e1e052a232d8",
+          "6d7d890a-a300-4aaf-a648-616b50160819"
+        ],
+        "settings": {
+          "footer-link-list-1": "footer",
+          "footer-link-list-2": "footer-menu-2",
+          "footer-link-list-3": "footer-menu-3",
+          "email-title": "Newsletter Sign Up",
+          "email-text": "Receive early access to new drops, offers and exciting announcements.",
+          "social-icon-1": "shopify:\/\/shop_images\/tik_tok.png",
+          "social-icon-1-url": "#",
+          "social-icon-2": "shopify:\/\/shop_images\/youtube.png",
+          "social-icon-2-url": "#",
+          "social-icon-3": "shopify:\/\/shop_images\/instagram.png",
+          "social-icon-3-url": "#",
+          "social-icon-4": "shopify:\/\/shop_images\/pinterest.png",
+          "social-icon-4-url": "#",
+          "social-icon-5": "shopify:\/\/shop_images\/twitter.png",
+          "social-icon-5-url": "#",
+          "social-icon-6": "shopify:\/\/shop_images\/facebook.png",
+          "social-icon-6-url": "#",
+          "copy_right_text": "&copy; 2021 BETTR",
+          "bottom-link-list": "footer-bottom"
+        }
+      },
+      "16196112475f499296": {
+        "type": "Hero",
+        "blocks": {
+          "93563707-a7a8-4099-bc9c-cae52658cadc": {
+            "type": "Side",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-Hero-Slide_1.jpg",
+              "mobile-image": "shopify:\/\/shop_images\/Home-Mobile-Hero-Slide_1.jpg",
+              "title": "Achieve an instant bare-faced glow!",
+              "text": "A transformative blend of natural ingredients to even skin tone & fade dark spots.",
+              "cta-text": "Shop Mask"
+            }
+          },
+          "f110a457-3e4e-4f20-a8e1-a47be813e9ab": {
+            "type": "Side",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-Hero-Slide_2_8b0e7753-9b48-49d6-a489-acae0ccb47c9.jpg",
+              "mobile-image": "shopify:\/\/shop_images\/Home-Mobile-Hero-Slide_2.jpg",
+              "title": "Achieve an instant bare-faced glow!",
+              "text": "A transformative blend of natural ingredients to even skin tone & fade dark spots.",
+              "cta-text": "Shop Mask"
+            }
+          },
+          "92b99b66-0dcb-4d97-8e60-a10383ea432d": {
+            "type": "Side",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-Hero-Slide_3.jpg",
+              "mobile-image": "shopify:\/\/shop_images\/Home-Desktop-Hero-Slide_2.jpg",
+              "title": "Achieve an instant bare-faced glow!",
+              "text": "A transformative blend of natural ingredients to even skin tone & fade dark spots.",
+              "cta-text": "Shop Mask"
+            }
+          }
+        },
+        "block_order": [
+          "93563707-a7a8-4099-bc9c-cae52658cadc",
+          "f110a457-3e4e-4f20-a8e1-a47be813e9ab",
+          "92b99b66-0dcb-4d97-8e60-a10383ea432d"
+        ],
+        "settings": {
+          "autoplay": true,
+          "cta-hover-color": "#000000",
+          "cta-hover-bg-color": "#fff003"
+        }
+      },
+      "1619701878f1d104e1": {
+        "type": "AsSeenIn",
+        "blocks": {
+          "13854ebf-5b25-48a8-a517-8d5e8a1781b8": {
+            "type": "Icons",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-AS_seen_in-icon_1_1d6e542e-5eca-4f1c-8302-075ef7a2459d.png"
+            }
+          },
+          "f9f06e0d-0fd2-40f3-86cc-cc8347452ded": {
+            "type": "Icons",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-AS_seen_in-icon_2_da7bbab5-598e-46bc-b445-621d259e29d1.png"
+            }
+          },
+          "48b60a11-c0a7-4d54-99d4-7ad4f3a68d2a": {
+            "type": "Icons",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-AS_seen_in-icon_3_4c6f536d-ba95-4d33-a482-b5d80234c82a.png"
+            }
+          },
+          "3eee2e65-c43e-413a-81b1-0554321cb088": {
+            "type": "Icons",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-AS_seen_in-icon_5_290595d2-2722-4595-be53-17b13002941e.png"
+            }
+          },
+          "2b5fab2c-cd65-42b3-a2d0-a17391ef063a": {
+            "type": "Icons",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Home-Desktop-AS_seen_in-icon_6_b06c4362-623a-4d0b-8246-129d84d9cffb.png"
+            }
+          }
+        },
+        "block_order": [
+          "13854ebf-5b25-48a8-a517-8d5e8a1781b8",
+          "f9f06e0d-0fd2-40f3-86cc-cc8347452ded",
+          "48b60a11-c0a7-4d54-99d4-7ad4f3a68d2a",
+          "3eee2e65-c43e-413a-81b1-0554321cb088",
+          "2b5fab2c-cd65-42b3-a2d0-a17391ef063a"
+        ],
+        "settings": {
+          "section-title": "As Seen In",
+          "opacity": 100
+        }
+      }
+    },
+    "content_for_index": [
+      "16196112475f499296",
+      "1619701878f1d104e1"
+    ]
+  }
+}

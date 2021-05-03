@@ -1,0 +1,346 @@
+
+<div id="SiteFooter" class="SiteFooter">
+
+<div class="SiteFooter__container">
+  <div class="SiteFooter__top">
+    <div class="SiteFooter-inner">
+      <div class="SiteFooter__top-content">
+
+        <div class="SiteFooter-our-promise__row>
+          <div class="SiteFooter-our__promise">
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+                {%- when 'our_promise' -%}
+                  <div class="SiteFooter-our__promise-box">
+                    <img src="{{ block.settings.our_promise_icon | img_url: 'master' }}" class="SiteFooter-our__promise-icon">
+                    <p class="SiteFooter-our__promise-content">{{ block.settings.our_promise_heading}}</p>
+                  </div>
+                {% endcase %}  
+            {% endfor %}   
+          </div>
+        </div>
+
+        <div class="SiteFooter-top-content__row">
+
+          <div class="SiteFooter-block__links">
+            <h5 class="SiteFooter-block__navigatoin_title">
+              {{ section.settings.navigation_title }}
+            </h5>
+            <div class="SiteFooter-block__links-inner">
+              <div class="SiteFooter-block__links-list">
+                {% for link in linklists[section.settings.footer-link-list-1].links %}
+                  <a href="{{ link.url }}" class="SiteFooter-block__link">
+                    <p class="SiteFooter-block__link-text">
+                      {{ link.title }}
+                    </p>
+                  </a>
+                {% endfor %}
+              </div>
+              <div class="SiteFooter-block__links-list">
+                {% for link in linklists[section.settings.footer-link-list-2].links %}
+                  <a href="{{ link.url }}" class="SiteFooter-block__link">
+                    <p class="SiteFooter-block__link-text {% if forloop.last %}SiteFooter-block__link-text-no-margin{% endif %}">
+                      {{ link.title }}
+                    </p>
+                  </a>
+                {% endfor %}
+              </div>
+              <div class="SiteFooter-block__links-list">
+                {% for link in linklists[section.settings.footer-link-list-3].links %}
+                  <a href="{{ link.url }}" class="SiteFooter-block__link">
+                    <p class="SiteFooter-block__link-text {% if forloop.last %}SiteFooter-block__link-text-no-margin{% endif %}">
+                      {{ link.title }}
+                    </p>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="SiteFooter-block__email SiteFooter-block__hide-mobile">
+            <h5 class="SiteFooter-block__email-title">
+              {{ section.settings.email-title }}
+            </h5>
+            <p class="SiteFooter-block__email-text">
+              {{ section.settings.email-text }}
+            </p>
+            <div class="SiteFooter-block__email-email-box"> Place third party email capture code here</div>
+            <div class="SiteFooter-block__email-social-icons">
+              {% if section.settings.social-icon-1 %}
+                <a href="{{ section.settings.social-icon-1-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-1 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+              {% if section.settings.social-icon-2 %}
+                <a href="{{ section.settings.social-icon-2-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-2 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+              {% if section.settings.social-icon-3 %}
+                <a href="{{ section.settings.social-icon-3-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-3 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+              {% if section.settings.social-icon-4 %}
+                <a href="{{ section.settings.social-icon-4-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-4 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+              {% if section.settings.social-icon-5 %}
+                <a href="{{ section.settings.social-icon-5-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-5 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+              {% if section.settings.social-icon-6 %}
+                <a href="{{ section.settings.social-icon-6-url }}" class="SiteFooter-block__email-social-icon">
+                  <img src="{{ section.settings.social-icon-6 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+                </a>
+              {% endif %} 
+            </div>
+          </div>
+        </div>
+
+
+       <div class="SiteFooter-block__email SiteFooter-block__show-mobile">
+          <h5 class="SiteFooter-block__email-title">
+            {{ section.settings.email-title }}
+          </h5>
+          <p class="SiteFooter-block__email-text">
+            {{ section.settings.email-text }}
+          </p>
+          <div class="SiteFooter-block__email-email-box"> Place third party email capture code here</div>
+          <div class="SiteFooter-block__email-social-icons">
+            {% if section.settings.social-icon-1 %}
+              <a href="{{ section.settings.social-icon-1-url }}" class="SiteFooter-block__email-social-icon">
+                <img src="{{ section.settings.social-icon-1 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+              </a>
+            {% endif %} 
+            {% if section.settings.social-icon-2 %}
+              <a href="{{ section.settings.social-icon-2-url }}" class="SiteFooter-block__email-social-icon">
+                <img src="{{ section.settings.social-icon-2 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+              </a>
+            {% endif %} 
+            {% if section.settings.social-icon-3 %}
+              <a href="{{ section.settings.social-icon-3-url }}" class="SiteFooter-block__email-social-icon">
+                <img src="{{ section.settings.social-icon-3 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+              </a>
+            {% endif %} 
+            {% if section.settings.social-icon-4 %}
+              <a href="{{ section.settings.social-icon-4-url }}" class="SiteFooter-block__email-social-icon">
+                <img src="{{ section.settings.social-icon-4 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+              </a>
+            {% endif %} 
+            {% if section.settings.social-icon-5 %}
+              <a href="{{ section.settings.social-icon-5-url }}" class="SiteFooter-block__email-social-icon">
+                <img src="{{ section.settings.social-icon-5 | img_url: 'master' }}" class="SiteFooter-block__email-social-icon-svg">
+              </a>
+            {% endif %} 
+          </div>
+        </div>
+
+          
+      </div>
+    </div>
+  </div>
+
+  <div class="SiteFooter__bottom">
+    <div class="SiteFooter-inner">
+      <div class="SiteFooter__bottom-content">
+        <div class="SiteFooter-bottom-copyright__content">
+          <p>{{section.settings.copy_right_text}}</p>
+        </div>
+        <div class="SiteFooter-bottom-content__links">
+          {% for link in linklists[section.settings.bottom-link-list].links %}
+            <a href="{{ link.url }}" class="SiteFooter-bottom-content__link">
+              <p class="SiteFooter-bottom-content__link-text">
+                {{ link.title }}
+              </p>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="SiteFooter-bottom-content__icons">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when 'payment_icons' -%}
+                <img src="{{ block.settings.payment_icon | img_url: 'master' }}" class="SiteFooter-bottom-content__icon-image">
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
+{% schema %}
+  {
+    "name": "Site Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Link Lists"
+      },
+        {
+            "id": "navigation_title",
+            "type": "text",
+            "label": "Navigation Title",
+            "default": "Navigation"
+        },
+        {
+          "type": "link_list",
+          "id": "footer-link-list-1",
+          "label": "First List of Links"
+        },
+        {
+          "type": "link_list",
+          "id": "footer-link-list-2",
+          "label": "Second List of Links"
+        },
+        {
+          "type": "link_list",
+          "id": "footer-link-list-3",
+          "label": "Third List of Links"
+        },
+
+      {
+        "type": "header",
+        "content": "Email Capture"
+      },
+        {
+          "type": "text",
+          "id": "email-title",
+          "label": "Title for Email Capture",
+          "default": "Lorem Ipsum"
+        },
+        {
+          "type": "text",
+          "id": "email-text",
+          "label": "Text for Email Capture",
+          "default": "Dolor sit amet, consectetur adipisicing!"
+        },
+
+      {
+        "type": "header",
+        "content": "Social Icons"
+      },
+        {
+          "type": "image_picker",
+          "id": "social-icon-1",
+          "label": "Social Icon 1"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-1-url",
+          "label": "Social Icon 1 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "social-icon-2",
+          "label": "Social Icon 2"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-2-url",
+          "label": "Social Icon 2 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "social-icon-3",
+          "label": "Social Icon 3"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-3-url",
+          "label": "Social Icon 3 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "social-icon-4",
+          "label": "Social Icon 4"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-4-url",
+          "label": "Social Icon 4 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "social-icon-5",
+          "label": "Social Icon 5"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-5-url",
+          "label": "Social Icon 5 Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "social-icon-6",
+          "label": "Social Icon 6"
+        },
+        {
+          "type": "url",
+          "id": "social-icon-6-url",
+          "label": "Social Icon 6 Link"
+        },
+
+      {
+        "type": "header",
+        "content": "Footer Bottom Settings"
+      },
+
+      {
+        "type": "header",
+        "content": "Bottom Footer"
+      },
+        {
+          "type": "text",
+          "id": "copy_right_text",
+          "label": "Copyrights Text",
+          "default": "Dolor sit amet, consectetur adipisicing!"
+        },
+        {
+          "type": "link_list",
+          "id": "bottom-link-list",
+          "label": "Bottom List of links"
+        },
+
+      {
+        "type": "header",
+        "content": "Payment Icons"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "payment_icons",
+        "name": "Payment Icons",
+        "settings": [
+          {
+            "id": "payment_icon",
+            "type": "image_picker",
+            "label": "choose or upload an image for payment icons"
+          }
+        ]
+      },
+      {
+        "type": "our_promise",
+        "name": "Our Promise",
+        "settings": [
+          {
+            "id": "our_promise_icon",
+            "type": "image_picker",
+            "label": "choose or upload an image for payment icons"
+          },
+          {
+            "id": "our_promise_heading",
+            "type": "text",
+            "label": "Promise Heading",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

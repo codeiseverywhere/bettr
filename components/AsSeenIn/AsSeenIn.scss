@@ -90,6 +90,46 @@ $AsSeenIn-breakpoint--before-max-width_max: (
   .asi__Icon {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+  }
+}
+
+
+@media screen and (max-width: 991px){
+  .asi__header {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-transform: uppercase;
+    padding-top: 17px;
+    color: $textGrey;
+  }
+  .asi__header {
+
+  }
+  .asi-inner {
+    padding-bottom: 15px;
+  }
+  .asi__inline-header-wrap {
+    width: 100%;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .asi__header-wrap {
+    margin-bottom: 15px;
+  }
+  .asi__content-wrapper {
+    height: 30px;
+  }
+  .asi__Icon-wrap {
+    padding: 0px 8px;
+  }
+  .asi__Icon {
+    max-width: 80px;
+    max-height: 30px;
   }
 }

@@ -21,9 +21,10 @@
             top: 100%;
             left: 0;
 
-            background-color: $SiteHeader--background;
+            background-color: $grey;
             transition: opacity 0.15s;
             transform-origin: top;
+            cursor: default;
 
             &.is-Offcanvas--closed {
                 transform: scaleY(0);

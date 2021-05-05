@@ -53,7 +53,7 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
     /*height: calc(95vh - 100px);
     min-height: 700px;
     max-height: 800px; */
-    height: auto;
+    height: 500px;
     min-height: 0px;
     max-height: 100%;
   }
@@ -123,7 +123,6 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
 @media screen and (max-width: $Hero-breakpoint--md_max) {
   .Hero__nav {
     width: 100%;
-    height: 64vw;
   }
 }
 @media screen and (max-width: $Hero-breakpoint--xs_max) {
@@ -233,121 +232,11 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
 }
 
 @media screen and (max-width: $Hero-breakpoint--lg_max) {
-  .Hero-slide__text-container {
-    position: relative;
-    width: 100%;
-    max-width: 558px;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 50px;
-  }
-  .Hero-slide__text-box {
-    margin-left: 7%;
-  }
-
-  .Hero-text-box__title-box {
-    width: 100%;
-    height: auto;
-    margin-bottom: 17px;
-  }
-  .Hero-text-box__title {
-    font-family: poppins, "sans-serif";
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 52px;
-    margin: 0;
-  }
-
-  .Hero-text-box__text-box {
-    width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-  }
-  .Hero-text-box__text {
-    font-family: poppins, "sans-serif";
-    font-size: 15px;
-    line-height: 29px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    opacity: 0.8;
-    margin: 0;
-  }
-
-  .Hero-text-box__cta-box {
-    width: 100%;
-    max-width: 345px;
-    height: 60px;
-  }
-
-  .Hero-text-box__cta {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    color: #fff;
-    font-family: poppins, "sans-serif";
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
 }
 
 @media screen and (max-width: $Hero-breakpoint--md_max) {
-  .Hero-slide-inner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .Hero-slide__image-container {
-    height: 64vw;
-  }
-  .Hero-slide__text-container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-grow: 1;
-  }
-  .Hero-slide__text-box {
-    width: 100%;
-    max-width: 450px;
-    overflow: hidden;
-    color: #000;
-    padding: 35px 20px 0px 20px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .Hero-text-box__title-box {
-    margin-bottom: 15px;
-  }
-  .Hero-text-box__text-box {
-    margin: 0px auto 35px;
-  }
-  .Hero-text-box__title {
-    font-size: 34px;
-    line-height: 45px;
-  }
-  .Hero-text-box__text {
-    font-size: 18px;
-    letter-spacing: 0.3px;
-    margin: 0px auto;
-  }
-  .Hero-text-box__cta-box {
-    margin: 0px auto;
-  }
-
-  .Hero-slide-large-image {
-    display: none;
-  }
-  .Hero-slide-mobile-image {
-    display: block;
-  }
+  
 }
 
 @media screen and (max-width: $Hero-breakpoint--sm_max) and (max-height: $Hero-breakpoint--height-sm_max) {
@@ -425,5 +314,54 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
   .Hero-text-box__text {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+
+
+@media screen and (max-width: 991px){
+  .Hero {
+    height: auto;
+  }
+  .Hero-slide-inner {
+    flex-direction: column;
+  }
+  .Hero-slide__image-container {
+    height: 250px;
+  }
+  .Hero-slide__text-container {
+    position: relative;
+    max-width: 100%;
+    padding: 40px 25px 30px;
+    right: 0;
+    top: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .Hero-slide__text-box {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .Hero__nav-inner {
+    height: auto;
+  }
+  .Hero__nav {
+    bottom: auto;
+    top: 218px;
+    height: auto;
+  }
+  .Hero-text-box__title {
+    font-size: 30px;
+    line-height: 39px;
+  }
+  .Hero-text-box__text {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 28px;
   }
 }

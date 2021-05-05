@@ -32,7 +32,9 @@ $SiteHeader-toggle--margin_vertical: (($SiteHeader--height - $Button--menu_toggl
 
 .SiteHeader-toggle {
     float: right;
-    margin: $SiteHeader-toggle--margin_vertical $SiteHeader-toggle--margin_horizontal;
+    margin: 23px 10px 23px 25px;
+    position: absolute;
+    left: 0;
 
     &.is-Offcanvas--target_open {
         @include make-Button--menu_toggle_closed();

@@ -30,8 +30,8 @@
         border-right-width: 0;
         transition: none;
         transform: none;
-
         z-index: auto;
+        width: 100%;
     }
 
     html.no-csstransforms &.Offcanvas {

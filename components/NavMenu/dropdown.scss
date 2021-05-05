@@ -21,19 +21,66 @@ $NavMenu--dropdown-link--heading--font_size: 18px;
 
 .NavMenu--dropdown {
     padding: 5px 0;
-    margin: 0;
+    margin: 0 auto;
     list-style: none inside none;
     
     font-family: $NavMenu--dropdown--font_family;
     font-weight: $NavMenu--dropdown--font_weight;
     font-size: 0;
     
-    text-align: left;
     
     @media (min-width: $SiteHeader--breakpoint) {
-        border-left: $NavMenu--dropdown--border_width solid $NavMenu--dropdown--border_color;
+        text-align: left;
+        max-width: 1140px;
+        min-height: 334px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        padding-top: 30px;
+    }
+    .NavMenu-link {
+        margin-right: 0;
+        &:last-child {
+            margin-right: 0 !important;
+        }
     }
 }
+
+@media (min-width: $SiteHeader--breakpoint) {
+    .SiteHeader-navigation--third_menu {
+        .SiteHeader-dropdown {
+            ul {
+                li {
+                    margin-right: 30px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        &::before {
+                            display: none;
+                        }
+                        > img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        span {
+                            padding-top: 15px;
+                            color: $white;
+                            font-family: $defaultFam;
+                            font-size: 14px;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                            line-height: 19px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
 
 .NavMenu--dropdown-link {
     font-size: $NavMenu--dropdown--font_size;

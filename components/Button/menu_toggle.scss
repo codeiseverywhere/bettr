@@ -65,6 +65,22 @@ $Button--menu_toggle--height: ($Button--menu_toggle-bar--height * 3 + $Button--m
     }
 }
 
-.Button--menu_toggle {
-    @include make-Button--menu_toggle;
+.SiteHeader-banner {
+    .Button--menu_toggle {
+        @include make-Button--menu_toggle;
+        background: transparent;
+        border: none;
+        position: absolute;
+        z-index: 1000;
+        .Button--menu_toggle-bar {
+            height: 2px;
+            width: 17px;
+        }
+        &:hover, &:focus {
+            background: transparent;
+            .Button--menu_toggle-bar {
+                background-color: $white;
+            }
+        }
+    }
 }

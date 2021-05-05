@@ -32,7 +32,7 @@ html {
 	}
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 992px){
 	html {
 		body {
 			h1 {
@@ -63,7 +63,7 @@ html {
 	}
 }
 
-@media screen and (max-width: 768px){	
+@media screen and (max-width: 991px){	
 	html {
 		body {
 			h1 {
@@ -97,10 +97,10 @@ html {
 /* Section Spacing */ 
 .section-space {
 	display: block;
-	@media screen and (min-width: 768px){
+	@media screen and (min-width: 992px){
 		height: 120px;
 	}
-	@media screen and (max-width: 768px){
+	@media screen and (max-width: 991px){
 		height: 80px;
 	}
 }
@@ -118,6 +118,9 @@ html {
 	display: inline-block;	
 	min-width: 263px;
 	text-transform: uppercase;
+	@media screen and (max-width:640px) {
+		min-width: auto;
+	}
 }
 .site-btn,
 .ctaDefault {
@@ -154,4 +157,32 @@ html {
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%); 
+}
+
+hr {
+	width: 100%;
+	margin: 35px 0;
+	border-color: rgba(255,255,255,0.3);
+}
+
+@media screen and (min-width: 992px) {
+	html {
+		body {
+			.mobile-view {
+				display: none
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	html {
+		body {			
+			.desktop-view {
+				display: none
+			}
+			hr {
+				margin: 20px 0;
+			}
+		}
+	}
 }

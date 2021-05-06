@@ -38,14 +38,17 @@
 
         </div>
         
-        <div class="sticky-nav mobile-view">
-            <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Quiz</a></li>
-                <li><a href="#">Results</a></li>
-                <li><a href="#">Subscribe</a></li>                        
-            </ul>
-        </div>
+        {% if section.settings.mobile-linklist %}
+            <div class="sticky-nav mobile-view">
+                <ul>
+                    {% for link in linklists[section.settings.mobile-linklist].links %}
+                        <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}                  
+                </ul>
+            </div>
+        {% endif %}
 
         <div class="SiteHeader-content is-Offcanvas--closed" id="SiteHeader-navigation_id0">
             <div class="Offcanvas-scroller">
@@ -60,12 +63,10 @@
                 </div>
             {% endif %}
 
-                 <a class="SiteHeader-brand SiteHeader-brand--desktop SiteHeader-brand--centered" href="/">
+                <a class="SiteHeader-brand SiteHeader-brand--desktop SiteHeader-brand--centered" href="/">
                     <img class="SiteHeader-logo" src="{{ section.settings.header-logo | img_url: 'original' }}" alt="Phylactery">
                 </a>
                             
-
-
                 <nav class="SiteHeader-navigation SiteHeader-navigation--first_menu">
                     {% for block in section.blocks %}
                         {% unless block.settings.exposed %}
@@ -97,8 +98,8 @@
                 <div class="searchbar" id="main-searchbar">
                     <div class="searchbar-inner">
                         {{ 'Search-1.png' | asset_url | img_tag: 'Search' }}
-                        <form>
-                            <input type="text" placeholder="Search">
+                        <form action="/search">
+                            <input type="text" name="q" placeholder="Search">
                             <button type="submit">
                         </form>
                     </div>
@@ -129,6 +130,16 @@
                 "type": "image_picker",
                 "id": "header-logo",
                 "label": "Header Logo"
+            },
+            {
+                "type": "header",
+                "content": "Mobile Sticky Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "mobile-linklist",
+                "label": "Mobile Sticky linklist",
+                "default": "main-menu"
             }
         ],
         "blocks": [
@@ -165,6 +176,73 @@
                         "id": "linklist",
                         "label": "Menu linklist",
                         "default": "main-menu"
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": "Please use following settings for the dropdown of about us menu."
+                    },
+                    {
+                        "type": "header",
+                        "content": "ABOUT US"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "aboutimage",
+                        "label": "Choose an image for the menu",
+                        "info": "ensure that your image file is a .png and properly sized for best results."
+                    },
+                    {
+                        "type": "text",
+                        "id": "abouttitle",
+                        "label": "Link Title",
+                        "default": "Loripsum"
+                    },
+                    {
+                        "type": "url",
+                        "id": "abouturl",
+                        "label": "Choose a url for the menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "INGREDIENTS"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "ingimage",
+                        "label": "Choose an image for the menu",
+                        "info": "ensure that your image file is a .png and properly sized for best results."
+                    },
+                    {
+                        "type": "text",
+                        "id": "ingtitle",
+                        "label": "Link Title",
+                        "default": "Loripsum"
+                    },
+                    {
+                        "type": "url",
+                        "id": "ingurl",
+                        "label": "Choose a url for the menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Blog"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "blogimage",
+                        "label": "Choose an image for the menu",
+                        "info": "ensure that your image file is a .png and properly sized for best results."
+                    },
+                    {
+                        "type": "text",
+                        "id": "blogtitle",
+                        "label": "Link Title",
+                        "default": "Loripsum"
+                    },
+                    {
+                        "type": "url",
+                        "id": "blogurl",
+                        "label": "Choose a url for the menu"
                     }
                 ]
             },
@@ -318,63 +396,6 @@
                         "id": "search-icon",
                         "label": "Choose an icon for you cart",
                         "info": "ensure that your image file is a .png and properly sized for best results."
-                    }
-                ]
-            },
-            {
-                "type": "hilight-button",
-                "name": "Hilight Button",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "select",
-                        "id": "location",
-                        "label": "Placement",
-                        "options": [
-                            {
-                                "group": "Logo inline",
-                                "value": "first_menu",
-                                "label": "To the right of the logo"
-                            },
-                            {
-                                "group": "Logo inline",
-                                "value": "second_menu",
-                                "label": "To the left of the logo"
-                            },
-                            {
-                                "group": "Below logo",
-                                "value": "third_menu",
-                                "label": "Below the primary navigation bar"
-                            }
-                        ],
-                        "default": "first_menu",
-                        "info": "Select a location for the accounts icon."
-                    },
-                    {
-                        "type": "color",
-                        "id": "hilight-bg-color",
-                        "label": "Hilight Button Background Color",
-                        "default": "#eaeaea",
-                        "info": "Choose a background color for the hilight button"
-                    },
-                    {
-                        "type": "color",
-                        "id": "hilight-text-color",
-                        "label": "Hilight Button Text Color",
-                        "default": "#000",
-                        "info": "Choose a color for the hilight button text"
-                    },
-                    {
-                        "type": "text",
-                        "id": "hilight-text",
-                        "label": "Text for hilight button",
-                        "info": "*Keep this length of the text to a minimum to prevent from being to large and throwing off flow of header"
-                    },
-                    {
-                        "type": "url",
-                        "id": "hilight-url",
-                        "label": "Link for hilight button",
-                        "info": "Choose a link for the hilight button"
                     }
                 ]
             }

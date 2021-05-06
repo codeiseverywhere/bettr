@@ -475,7 +475,7 @@ $NavMenu--main_menu--item_height_bp: (
 
 }
 
-
+.SiteHeader-navigation--second_menu ul li.hidefromsecondmenu{display:none;}
 @media screen and (max-width: 1199px){
   .SiteHeader-navigation--second_menu div ul li a span{
     padding-left: 0;

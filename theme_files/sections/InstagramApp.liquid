@@ -13,7 +13,8 @@
       </h4>
     </div>
 
-    <div class="ai__content"></div>
+    <div class="ai__content">This is a instagram section and you can find this page from component/instagramApp folder and this will be carousal slider and each image will have a URL as well.</div>
+
 
   </div>
 </div>
@@ -26,13 +27,31 @@
         "type": "text",
         "id": "title",
         "label": "Section Title",
-        "default": "#Gleamin"
+        "default": "#Bettr"
       },
       {
         "type": "text",
         "id": "sub-title",
         "label": "Section Sub Title",
         "default": "to join in on the fun."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "instagramfeed",
+        "name": "Instagramfeed",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Choose Image"
+          },
+          {
+            "type": "url",
+            "id": "cta-link",
+            "label": "Link to Instagram"
+          }
+        ]
       }
     ],
     "presets": [

@@ -1,0 +1,32 @@
+<div id="best-selling-collection" class="best-selling-collection">
+  Your code will be here! This file is inside component/Bestsellerscollection
+</div>
+
+{% schema %}
+  {
+    "name": "Bettr Best Selles",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Collection Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Collection Text"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Choose a collection"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Collection",
+        "name": "Best Sellers"
+      }
+    ]
+  }
+{% endschema %}

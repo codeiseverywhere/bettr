@@ -13,9 +13,14 @@
   {% endif %}
 }
 
-.Hero-cta-hover:hover {
+.Hero-text-box__cta {
+  color: {{ section.settings.cta-color }};
+  background-color: {{ section.settings.cta-bg-color }};
+}
+.Hero-text-box__cta:hover {
   color: {{ section.settings.cta-hover-color }};
   background-color: {{ section.settings.cta-hover-bg-color }};
+  border:1px solid {{ section.settings.cta-hover-border-color }};
 }
 </style>
 <div id="x-hero" class="Hero" data-autoplay="{{ section.settings.autoplay }}">
@@ -41,7 +46,7 @@
                 <img src="{{ block.settings.mobile-image | img_url: 'master' }}" class="Hero-slide__image Hero-slide-mobile-image">
               </div>
 
-              <div class="Hero-slide__text-container">
+              <div class="Hero-slide__text-container boxpos-{{section.settings.alignment}}">
                 <div class="Hero-slide__text-box">
                     <div class="Hero-text-box__title-box">
                       <h1 class="Hero-text-box__title">{{ block.settings.title }}</h1>
@@ -50,7 +55,7 @@
                       <p class="Hero-text-box__text">{{ block.settings.text }}</p>
                     </div>
                     <div class="Hero-text-box__cta-box">
-                      <a href="{{ block.settings.cta-link }}" class="Hero-text-box__cta site-btn">{{ block.settings.cta-text }}</a>
+                      <a href="{{ block.settings.cta-link }}" class="Hero-text-box__cta">{{ block.settings.cta-text }}</a>
                     </div>
                 </div>
               </div>
@@ -77,15 +82,51 @@
       },
       {
         "type": "color",
-        "id": "cta-hover-color",
+        "id": "cta-color",
         "label": "Slide CTA Text Color",
         "default": "#000"
       },
       {
         "type": "color",
-        "id": "cta-hover-bg-color",
+        "id": "cta-bg-color",
         "label": "Slide CTA Background Color",
         "default": "#FFF003"
+      },
+      {
+          "type": "header",
+          "content": "CTA Mouseover settings"
+      },
+      {
+        "type": "color",
+        "id": "cta-hover-color",
+        "label": "Slide CTA Hover Text Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "cta-hover-bg-color",
+        "label": "Slide CTA Hover Background Color",
+        "default": "#FFF003"
+      },
+      {
+        "type": "color",
+        "id": "cta-hover-border-color",
+        "label": "Slide CTA Hover Border Color",
+        "default": "#fff"
+      },
+      {
+         "type": "header",
+          "content": "Texbox Alignment"
+      },
+      {
+         "type": "radio",
+         "id": "alignment",
+         "label": "Texbox Alignment",
+         "options": [
+                    { "value": "left", "label": "Left Aligned" },
+                    { "value": "right", "label": "Right Aligned" },
+                    { "value": "center", "label": "Place in Center" }
+                ]
       }
     ],
     "blocks": [

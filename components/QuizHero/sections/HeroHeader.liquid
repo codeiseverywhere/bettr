@@ -1,0 +1,93 @@
+<style>
+.Quiz-Hero-text-box__cta {
+  color: {{ section.settings.cta-color }};
+  background-color: {{ section.settings.cta-bg-color }};
+}
+.Quiz-Hero-text-box__cta:hover {
+  color: {{ section.settings.cta-hover-color }};
+  background-color: {{ section.settings.cta-hover-bg-color }};
+  border:1px solid {{ section.settings.cta-hover-border-color }};
+}
+</style>
+
+<header class="QuizHeroHeader QuizHeroHeader--{{ section.settings.size }} QuizHeroHeader--{{ section.settings.background_color }} QuizHeroHeader--{{section.settings.image_focus}}" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});">
+    <div class="QuizHeroHeader-valign QuizHeroHeader-valign--{{section.settings.alignment}}">
+        <div class="QuizHeroHeader-container">
+            <h1 class="QuizHeroHeader-title">{{ section.settings.title }}</h1>
+            {{ section.settings.content }}
+        </div>
+    </div>
+</header>
+This is inside component/QuizHero folder, For CTA color, use above classes 
+{% schema %}
+    {
+        "name": "Quiz Header",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading"
+            },
+            {
+                "type": "textarea",
+                "id": "content",
+                "label": "Text"
+            },
+            {
+                "type": "image_picker",
+                "id": "background_image",
+                "label": "Header BG"
+            },
+            {
+               "type": "radio",
+               "id": "alignment",
+               "label": "Text Alignment",
+               "options": [
+                        { "value": "left", "label": "Left Aligned" },
+                        { "value": "right", "label": "Right Aligned" },
+                        { "value": "center", "label": "Place in Center" }
+                    ]
+           },
+           {
+               "type": "color",
+               "id": "cta-color",
+               "label": "Slide CTA Text Color",
+               "default": "#000"
+            },
+            {
+               "type": "color",
+               "id": "cta-bg-color",
+               "label": "Slide CTA Background Color",
+               "default": "#FFF003"
+            },
+            {
+               "type": "header",
+               "content": "CTA Mouseover settings"
+            },
+            {
+               "type": "color",
+               "id": "cta-hover-color",
+               "label": "Slide CTA Hover Text Color",
+               "default": "#000"
+            },
+            {
+              "type": "color",
+              "id": "cta-hover-bg-color",
+              "label": "Slide CTA Hover Background Color",
+              "default": "#FFF003"
+            },
+            {
+              "type": "color",
+              "id": "cta-hover-border-color",
+              "label": "Slide CTA Hover Border Color",
+              "default": "#fff"
+            }
+        ],
+        "presets": [
+            {   
+                "category": "Quiz Hero",
+                "name": "Quiz Hero"
+            }
+        ]
+    }
+{% endschema %}

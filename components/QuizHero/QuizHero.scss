@@ -1,0 +1,105 @@
+$QuizHeroHeader--min_height: 556px;
+$QuizHeroHeader--min_height_sm: 556px;
+$QuizHeroHeader--min_height_md: 556px;
+$QuizHeroHeader--min_height_lg: 556px;
+
+$QuizHeroHeader--thin--min_height: 330px;
+$QuizHeroHeader--thin--min_height_sm: 330px;
+$QuizHeroHeader--thin--min_height_md: 330px;
+$QuizHeroHeader--thin--min_height_lg: 330px;
+
+$QuizHeroHeader--breakpoint: $Viewport-sm;
+
+.QuizHeroHeader {
+    @include make-Padding();
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: table;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    min-height: $QuizHeroHeader--min_height;
+
+    @media (min-width: $Viewport-sm) {
+        min-height: $QuizHeroHeader--min_height_sm;
+    }
+
+    @media (min-width: $Viewport-md) {
+        min-height: $QuizHeroHeader--min_height_md;
+    }
+
+    @media (min-width: $Viewport-lg) {
+        min-height: $QuizHeroHeader--min_height_lg;
+    }
+}
+
+.QuizHeroHeader--thin {
+    min-height: $QuizHeroHeader--thin--min_height;
+
+    @media (min-width: $Viewport-sm) {
+        min-height: $QuizHeroHeader--thin--min_height_sm;
+    }
+
+    @media (min-width: $Viewport-md) {
+        min-height: $QuizHeroHeader--thin--min_height_md;
+    }
+
+    @media (min-width: $Viewport-lg) {
+        min-height: $QuizHeroHeader--thin--min_height_lg;
+    }
+}
+
+.QuizHeroHeader--light_bg {
+    @include make-Type--color($Font-color--black);
+}
+
+.QuizHeroHeader--dark_bg {
+    @include make-Type--color($Font-color--white);
+}
+
+.QuizHeroHeader--image_focus_right {
+    background-position: center left;
+
+    @media (min-width: $QuizHeroHeader--breakpoint) {
+        text-align: left;
+        background-position: center;
+    }
+}
+
+.QuizHeroHeader--image_focus_left {
+    background-position: center right;
+
+    @media (min-width: $QuizHeroHeader--breakpoint) {
+        text-align: right;
+        background-position: center;
+    }
+}
+
+.QuizHeroHeader-container {
+    @extend .Container;
+}
+
+.QuizHeroHeader-valign {
+    display: table-cell;
+    vertical-align: middle;
+
+    :first-child {
+        margin-top: 0;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.QuizHeroHeader-valign--bottom {
+    vertical-align: bottom;
+}
+
+.QuizHeroHeader-valign--top {
+    vertical-align: top;
+}

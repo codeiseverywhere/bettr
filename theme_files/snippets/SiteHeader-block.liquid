@@ -38,8 +38,37 @@
                         </li>
                     {% endif %}
                 {% endfor %}
+                        <li class="NavMenu-link NavMenu--main_menu-link hidefromsecondmenu">
+                            <a data-toggle="offcanvas" data-target="#{{ link_id }}" href="#" class=""><span>About Us</span> 
+                              <span class="NavMenu-link--arrow"></span>
+                            </a>
+                            <div class="Offcanvas Offcanvas--lv2 SiteHeader-dropdown is-Offcanvas--closed" id="{{ link_id }}">
+                                <div class="Offcanvas-scroller">
+                                    <ul class="NavMenu NavMenu--dropdown">
+                                      <li>
+                                        <a href="{{block.settings.abouturl}}">
+                                          <img src="{{block.settings.aboutimage | img_url: 'medium'}}" alt="{{block.settings.abouttitle}}"/>
+                                          <span>{{block.settings.abouttitle}}</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="{{block.settings.ingurl}}">
+                                          <img src="{{block.settings.ingimage | img_url: 'medium'}}" alt="{{block.settings.ingtitle}}"/>
+                                          <span>{{block.settings.ingtitle}}</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="{{block.settings.blogurl}}">
+                                          <img src="{{block.settings.blogimage | img_url: 'medium'}}" alt="{{block.settings.blogtitle}}"/>
+                                          <span>{{block.settings.blogtitle}}</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                              </div>
+                          </div>   
+                        </li>
             </ul>
-
+    
         {% when 'accounts' %}
             {% if shop.customer_accounts_enabled %}
                 <div class="SiteHeader-Icon SiteHeader-account">
@@ -115,15 +144,6 @@
                 <a href="/search" class="SiteHeader-search-link">
                     <img src="{{ block.settings.search-icon | img_url: 'original' }}" class="SiteHeader-search-icon"/>
                 </a>
-            </div>
-
-        {% when 'hilight-button' %}
-            <div class="SiteHeader-Icon SiteHeader-hilight_botton_wrap">
-                <div class="SiteHeader-hilight_botton" style="background-color: {{ block.settings.hilight-bg-color }}">
-                    <a href="{{ block.settings.hilight-url }}" class="SiteHeader-hilight_botton_link" style="color: {{ block.settings.hilight-text-color }}">
-                        {{ block.settings.hilight-text }}
-                    </a>
-                </div>
             </div>
             
     {% endcase %}

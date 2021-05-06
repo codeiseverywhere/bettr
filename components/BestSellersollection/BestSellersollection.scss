@@ -1,0 +1,18 @@
+//BreakPoints can be found in main.scss or assets/scss/viewport.scss
+
+$BestSellersCollection-breakpoint--before-max-width: 1161px;
+$BestSellersCollection-breakpoint--before-max-width_max: (
+  $BestSellersCollection-breakpoint--before-max-width - 1px
+);
+
+$BestSellersCollection-breakpoint--custom-1: 1350px;
+$BestSellersCollection-breakpoint--custom-2: 1200px;
+$BestSellersCollection-breakpoint--custom-3: 1000px;
+$BestSellersCollection-breakpoint--custom-4: 900px;
+$BestSellersCollection-breakpoint--custom-5: 640px;
+$BestSellersCollection-breakpoint--custom-6: 420px;
+
+.best-selling-collection {
+  position: relative;
+  width: 100%;
+}

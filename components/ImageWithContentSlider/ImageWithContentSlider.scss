@@ -1,0 +1,33 @@
+//BreakPoints can be found in main.scss or assets/scss/viewport.scss
+
+$photo-content-slider--xlg: 1920px;
+$photo-content-slider--xlg_max: ($photo-content-slider--xlg - 1px);
+
+$photo-content-slider--lg: 1250px;
+$photo-content-slider--lg_max: ($photo-content-slider--lg - 1px);
+
+$photo-content-slider--md: 1024px;
+$photo-content-slider--md_max: ($photo-content-slider--md - 1px);
+
+$photo-content-slider--sm: 768px;
+$photo-content-slider--sm_max: ($photo-content-slider--sm - 1px);
+
+$photo-content-slider--xs: 450px;
+$photo-content-slider--xs_max: ($photo-content-slider--xs - 1px);
+
+$photo-content-slider--xxs: 400px;
+$photo-content-slider--xxs_max: ($photo-content-slider--xxs - 1px);
+
+$photo-content-slider--xxxs: 350px;
+$photo-content-slider--xxxs_max: ($photo-content-slider--xxs - 1px);
+
+$photo-content-slider--height-sm: 850px;
+$photo-content-slider--height-sm_max: ($photo-content-slider--height-sm - 1px);
+
+$photo-content-slider--height-xs: 600px;
+$photo-content-slider--height-xs_max: ($photo-content-slider--height-xs - 1px);
+
+.photo-content-slider {
+  width: 100vw;
+}
+

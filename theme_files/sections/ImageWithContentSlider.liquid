@@ -1,0 +1,52 @@
+
+<div id="photo-content-slider" class="photo-content-slider" data-autoplay="{{ section.settings.autoplay }}">
+  You HTML will be here and this is available in component/ImageWithContentSlider
+  on click of arrow image, content and numbers will change
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Photo Content Slider",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Enable Autoplay",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "PhotoandContent",
+        "name": "Photo and Content",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Slide Image"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content to Slide",
+            "default": "Lorem ipsum dolor sit amet"
+          },
+          {
+            "type": "text",
+            "id": "askedby",
+            "label": "Asked By"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Hero",
+        "name": "Photo Content Slider"
+      }
+    ]
+  }
+{% endschema %}
+

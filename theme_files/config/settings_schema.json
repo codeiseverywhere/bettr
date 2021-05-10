@@ -90,37 +90,37 @@
       {
         "type": "text",
         "id": "h1-desktop-font-size",
-        "label": "H1 Font Size (Desktop/Large)",
+        "label": "H1 Font Size (Desktop\/Large)",
         "default": "40px"
       },
       {
         "type": "text",
         "id": "h1-mobile-font-size",
-        "label": "H1 Font Size (Mobile/Small)",
+        "label": "H1 Font Size (Mobile\/Small)",
         "default": "34px"
       },
       {
         "type": "text",
         "id": "h1-desktop-line-height",
-        "label": "H1 Line Height (Desktop/Large)",
+        "label": "H1 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h1-mobile-line-height",
-        "label": "H1 Line Height (Mobile/Small)",
+        "label": "H1 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h1-desktop-letter-spacing",
-        "label": "H1 Letter Spacing (Desktop/Large)",
+        "label": "H1 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h1-mobile-letter-spacing",
-        "label": "H1 Letter Spacing (Mobile/Small)",
+        "label": "H1 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -130,37 +130,37 @@
       {
         "type": "text",
         "id": "h2-desktop-font-size",
-        "label": "H2 Font Size (Desktop/Large)",
+        "label": "H2 Font Size (Desktop\/Large)",
         "default": "36px"
       },
       {
         "type": "text",
         "id": "h2-mobile-font-size",
-        "label": "H2 Font Size (Mobile/Small)",
+        "label": "H2 Font Size (Mobile\/Small)",
         "default": "32px"
       },
       {
         "type": "text",
         "id": "h2-desktop-line-height",
-        "label": "H2 Line Height (Desktop/Large)",
+        "label": "H2 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h2-mobile-line-height",
-        "label": "H2 Line Height (Mobile/Small)",
+        "label": "H2 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h2-desktop-letter-spacing",
-        "label": "H2 Letter Spacing (Desktop/Large)",
+        "label": "H2 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h2-mobile-letter-spacing",
-        "label": "H2 Letter Spacing (Mobile/Small)",
+        "label": "H2 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -170,37 +170,37 @@
       {
         "type": "text",
         "id": "h3-desktop-font-size",
-        "label": "H3 Font Size (Desktop/Large)",
+        "label": "H3 Font Size (Desktop\/Large)",
         "default": "32px"
       },
       {
         "type": "text",
         "id": "h3-mobile-font-size",
-        "label": "H3 Font Size (Mobile/Small)",
+        "label": "H3 Font Size (Mobile\/Small)",
         "default": "30px"
       },
       {
         "type": "text",
         "id": "h3-desktop-line-height",
-        "label": "H3 Line Height (Desktop/Large)",
+        "label": "H3 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h3-mobile-line-height",
-        "label": "H3 Line Height (Mobile/Small)",
+        "label": "H3 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h3-desktop-letter-spacing",
-        "label": "H3 Letter Spacing (Desktop/Large)",
+        "label": "H3 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h3-mobile-letter-spacing",
-        "label": "H3 Letter Spacing (Mobile/Small)",
+        "label": "H3 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -210,37 +210,37 @@
       {
         "type": "text",
         "id": "h4-desktop-font-size",
-        "label": "H4 Font Size (Desktop/Large)",
+        "label": "H4 Font Size (Desktop\/Large)",
         "default": "28px"
       },
       {
         "type": "text",
         "id": "h4-mobile-font-size",
-        "label": "H4 Font Size (Mobile/Small)",
+        "label": "H4 Font Size (Mobile\/Small)",
         "default": "28px"
       },
       {
         "type": "text",
         "id": "h4-desktop-line-height",
-        "label": "H4 Line Height (Desktop/Large)",
+        "label": "H4 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h4-mobile-line-height",
-        "label": "H4 Line Height (Mobile/Small)",
+        "label": "H4 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h4-desktop-letter-spacing",
-        "label": "H4 Letter Spacing (Desktop/Large)",
+        "label": "H4 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h4-mobile-letter-spacing",
-        "label": "H4 Letter Spacing (Mobile/Small)",
+        "label": "H4 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -250,37 +250,37 @@
       {
         "type": "text",
         "id": "h5-desktop-font-size",
-        "label": "H5 Font Size (Desktop/Large)",
+        "label": "H5 Font Size (Desktop\/Large)",
         "default": "18px"
       },
       {
         "type": "text",
         "id": "h5-mobile-font-size",
-        "label": "H5 Font Size (Mobile/Small)",
+        "label": "H5 Font Size (Mobile\/Small)",
         "default": "18px"
       },
       {
         "type": "text",
         "id": "h5-desktop-line-height",
-        "label": "H5 Line Height (Desktop/Large)",
+        "label": "H5 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h5-mobile-line-height",
-        "label": "H5 Line Height (Mobile/Small)",
+        "label": "H5 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h5-desktop-letter-spacing",
-        "label": "H5 Letter Spacing (Desktop/Large)",
+        "label": "H5 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h5-mobile-letter-spacing",
-        "label": "H5 Letter Spacing (Mobile/Small)",
+        "label": "H5 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -290,37 +290,37 @@
       {
         "type": "text",
         "id": "h6-desktop-font-size",
-        "label": "H6 Font Size (Desktop/Large)",
+        "label": "H6 Font Size (Desktop\/Large)",
         "default": "14px"
       },
       {
         "type": "text",
         "id": "h6-mobile-font-size",
-        "label": "H6 Font Size (Mobile/Small)",
+        "label": "H6 Font Size (Mobile\/Small)",
         "default": "14px"
       },
       {
         "type": "text",
         "id": "h6-desktop-line-height",
-        "label": "H6 Line Height (Desktop/Large)",
+        "label": "H6 Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h6-mobile-line-height",
-        "label": "H6 Line Height (Mobile/Small)",
+        "label": "H6 Line Height (Mobile\/Small)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "h6-desktop-letter-spacing",
-        "label": "H6 Letter Spacing (Desktop/Large)",
+        "label": "H6 Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
         "type": "text",
         "id": "h6-mobile-letter-spacing",
-        "label": "H6 Letter Spacing (Mobile/Small)",
+        "label": "H6 Letter Spacing (Mobile\/Small)",
         "default": ".45px"
       },
       {
@@ -330,19 +330,19 @@
       {
         "type": "text",
         "id": "p-font-size",
-        "label": "P Font Size (Desktop/Large)",
+        "label": "P Font Size (Desktop\/Large)",
         "default": "18px"
       },
       {
         "type": "text",
         "id": "p-line-height",
-        "label": "P Line Height (Desktop/Large)",
+        "label": "P Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "p-letter-spacing",
-        "label": "P Letter Spacing (Desktop/Large)",
+        "label": "P Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       },
       {
@@ -352,19 +352,19 @@
       {
         "type": "text",
         "id": "p-small-font-size",
-        "label": "P-Small Font Size (Desktop/Large)",
+        "label": "P-Small Font Size (Desktop\/Large)",
         "default": "14px"
       },
       {
         "type": "text",
         "id": "p-small-line-height",
-        "label": "P-Small Line Height (Desktop/Large)",
+        "label": "P-Small Line Height (Desktop\/Large)",
         "default": "1.5"
       },
       {
         "type": "text",
         "id": "p-small-letter-spacing",
-        "label": "P-Small Letter Spacing (Desktop/Large)",
+        "label": "P-Small Letter Spacing (Desktop\/Large)",
         "default": ".45px"
       }
     ]
@@ -569,8 +569,14 @@
         "id": "header-position",
         "label": "Header Position",
         "options": [
-          { "value": "relative", "label": "Relative" },
-          { "value": "fixed", "label": "Fixed" }
+          {
+            "value": "relative",
+            "label": "Relative"
+          },
+          {
+            "value": "fixed",
+            "label": "Fixed"
+          }
         ],
         "default": "relative"
       },
@@ -669,7 +675,7 @@
         "type": "text",
         "id": "mailing_list_form_action",
         "label": "MailChimp Form Action URL",
-        "info": "[Where do I find my MailChimp form action URL?](http://docs.shopify.com/support/configuration/store-customization/where-do-i-get-my-mailchimp-form-action)"
+        "info": "[Where do I find my MailChimp form action URL?](http:\/\/docs.shopify.com\/support\/configuration\/store-customization\/where-do-i-get-my-mailchimp-form-action)"
       },
       {
         "type": "text",
@@ -692,7 +698,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Social meta tags include [Facebook](https://developers.facebook.com/docs/opengraph/using-objects/) and [Pinterest](https://developers.pinterest.com/rich_pins/) Open Graph Tags and [Twitter Cards](https://dev.twitter.com/docs/cards/types/product-card) . These are enabled by default to make the store more accessible on different platforms, and more readable for search engines."
+        "content": "Social meta tags include [Facebook](https:\/\/developers.facebook.com\/docs\/opengraph\/using-objects\/) and [Pinterest](https:\/\/developers.pinterest.com\/rich_pins\/) Open Graph Tags and [Twitter Cards](https:\/\/dev.twitter.com\/docs\/cards\/types\/product-card) . These are enabled by default to make the store more accessible on different platforms, and more readable for search engines."
       },
       {
         "type": "text",
@@ -768,7 +774,7 @@
         "type": "checkbox",
         "id": "ajax_cart",
         "label": "Enable Ajaxify Cart",
-        "info": "[View Documentation](http://shopify.com/timber#ajax-cart)"
+        "info": "[View Documentation](http:\/\/shopify.com\/timber#ajax-cart)"
       },
       {
         "type": "select",
@@ -788,6 +794,246 @@
             "label": "Modal"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Image Content Slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Vendor Logo Carousel"
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_carousel_title",
+        "label": "Vendor Carousel Title"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_vendor_carousel_enable",
+        "label": "Enable Vendor Carousel"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_vendor_enable_1",
+        "label": "Enable Vendor 1"
+      },
+      {
+        "type": "image",
+        "id": "vendor_logo_1.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_text_1",
+        "label": "Vendor Text"  
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_name_1",
+        "label": "Vendor Name 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_vendor_enable_2",
+        "label": "Enable Vendor 2"
+      },
+      {
+        "type": "image",
+        "id": "vendor_logo_2.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_text_2",
+        "label": "Vendor Text"  
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_name_2",
+        "label": "Vendor Name 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_vendor_enable_3",
+        "label": "Enable Vendor 3"
+      },
+      {
+        "type": "image",
+        "id": "vendor_logo_3.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_text_3",
+        "label": "Vendor Text"  
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_name_3",
+        "label": "Vendor Name 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_vendor_enable_4",
+        "label": "Enable Vendor 4"
+      },
+      {
+        "type": "image",
+        "id": "vendor_logo_4.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_text_4",
+        "label": "Vendor Text"  
+      },
+      {
+        "type": "text",
+        "id": "home_vendor_name_4",
+        "label": "Vendor Name 4"
+      }      
+    ]
+  },
+  {
+    "name": "Instagram App",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Instagram App Setting"
+      },
+      {
+        "type": "checkbox",
+        "id": "instagram_app_enable",
+        "label": "Instagram App"
+      },
+      {
+        "type": "checkbox",
+        "id": "insta_enable_1",
+        "label": "Enable Insta 1"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_1",
+        "label": "Link"
+      },
+      {
+        "type": "image",
+        "id": "insta_img_1.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },      
+      {
+        "type": "checkbox",
+        "id": "insta_enable_2",
+        "label": "Enable Insta 2"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_2",
+        "label": "Link"
+      },
+      {
+        "type": "image",
+        "id": "insta_img_2.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },      
+      {
+        "type": "checkbox",
+        "id": "insta_enable_3",
+        "label": "Enable Insta 3"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_3",
+        "label": "Link"
+      },
+      {
+        "type": "image",
+        "id": "insta_img_3.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },      
+      {
+        "type": "checkbox",
+        "id": "insta_enable_4",
+        "label": "Enable Insta 4"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_4",
+        "label": "Link"
+      },
+      {
+        "type": "image",
+        "id": "insta_img_4.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },       
+      {
+        "type": "checkbox",
+        "id": "insta_enable_5",
+        "label": "Enable Insta 5"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_5",
+        "label": "Link"
+      },     
+      {
+        "type": "image",
+        "id": "insta_img_5.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },      
+      {
+        "type": "checkbox",
+        "id": "insta_enable_6",
+        "label": "Enable Insta 6"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_6",
+        "label": "Link"
+      },            
+      {
+        "type": "image",
+        "id": "insta_img_6.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
+      },      
+      {
+        "type": "checkbox",
+        "id": "insta_enable_7",
+        "label": "Enable Insta 7"
+      },
+      {
+        "type": "text",
+        "id": "inta_link_7",
+        "label": "Link"
+      },            
+      {
+        "type": "image",
+        "id": "insta_img_7.png",
+        "label": "Icon",
+        "max-width": 1000,
+        "max-height": 563
       }
     ]
   }

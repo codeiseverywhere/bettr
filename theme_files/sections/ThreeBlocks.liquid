@@ -1,40 +1,36 @@
-
-<div id="three-blocks" class="three-blocks">
-  <div class="tb__inner">
-
-    <div class="tb__section-title-wrap">
-      <h4 class="tb__section-title">
-        {{ section.settings.section-title }}
-      </h4>
-      <p>{{ section.settings.section-desc }}</p>
-    </div>
-This file is in components/threeblocks
-    <div class="tb__content">
-      {% for block in section.blocks %}
-        <div class="tb__block">
-          <div class="tb__block-inner">
-          <div class="tb__block-image-wrap">
-            <img src="{{ block.settings.image | img_url: 'master' }}" class="tb__block-image" >
+{% if section.settings.four-block-content %}
+<div id="three-blocks" class="three-blocks value-prop text-align-center">
+  <div class="tb__inner container">
+  <div class="section-space"></div>
+      {% if section.settings.section-title %}
+        <h3>{{section.settings.section-title}}</h3>
+      {% endif %}  
+      {% if section.settings.section-desc %}  
+        <p>{{section.settings.section-desc}}</p>
+      {% endif %}
+      <div class="value-props">
+        {% for block in section.blocks %}
+          <div class="item">
+            <img src="{{ block.settings.image | img_url: 'master' }}" class="prop-img">
+            <h4>{{ block.settings.title}}</h4>
+            <p>{{ block.settings.text}}</p>
           </div>
-            
-            <h5 class="tb__block-title">
-              {{ block.settings.title }}
-            </h5>
-            <p class="tb__block-text">
-              {{ block.settings.text }}
-            </p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
+        {% endfor %}
+    </div>    
+    <div class="section-space"></div>
   </div>
 </div>
-
+{% endif %}
 {% schema %}
   {
     "name": "Why Men Need",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "four-block-content",
+        "label": "Enable Blocks",
+        "default": true
+      },
       {
         "type": "text",
         "id": "section-title",

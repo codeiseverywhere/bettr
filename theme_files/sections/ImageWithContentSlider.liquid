@@ -1,19 +1,32 @@
-
-<div id="photo-content-slider" class="photo-content-slider" data-autoplay="{{ section.settings.autoplay }}">
-  You HTML will be here and this is available in component/ImageWithContentSlider
-  on click of arrow image, content and numbers will change
+{% if section.settings.photo-content-slider %}
+<div id="photo-content-slider" class="photo-content-slider"> 
+    <div class="slider-container">
+      <div class="slider imgcontentslider slider-custom">
+          {% for block in section.blocks %}
+            <div>
+              <div class="inner-slide">
+                <div class="slide-img" style="background-image: url({{ block.settings.image | img_url: 'master' }});"></div>
+                <div class="slide-content">
+                  <p class="p-lg">{{ block.settings.content  }}</p>
+                  {% if block.settings.askedby %}
+                    <span class="sm-p">@{{ block.settings.askedby  }}</span>
+                  {% endif %}
+                </div>
+              </div>  
+            </div>
+        {% endfor %}
+     </div>
+    </div> 
 </div>
-
-
-
+{% endif %}
 {% schema %}
   {
     "name": "Photo Content Slider",
     "settings": [
       {
         "type": "checkbox",
-        "id": "autoplay",
-        "label": "Enable Autoplay",
+        "id": "photo-content-slider",
+        "label": "Enable Slider",
         "default": true
       }
     ],

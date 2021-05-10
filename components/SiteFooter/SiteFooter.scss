@@ -412,7 +412,10 @@ $SiteFooter--custom-bp-2: 900px;
   margin-right: 40px;
 }
 .SiteFooter-block__email-social-icon img {
-  height: 25px;
+  height: 25px;  
+  &:hover { 
+    opacity: 50%;
+  }
 }
 
 .SiteFooter-block__email-social-icon-hover {

@@ -40,3 +40,27 @@
   font-weight: 600;
   margin: 0;
 }
+
+
+.instagram-app {
+  background: $black;
+  h3 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+  .instaslider {
+    padding-top: 30px;
+  }
+  .slide-img {
+    min-height: 263px;
+    margin: 0 15px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .slick-slider .slick-list {
+        padding: 0px 150px;
+  }
+}

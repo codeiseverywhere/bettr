@@ -60,6 +60,15 @@
   {{ content_for_header }}
   
   {{ 'script.js' | asset_url | script_tag }}
+  
+  {% if template == 'index' %}
+  {% if settings.home_vendor_carousel_enable %} 
+  {{ 'slick.css' | asset_url | stylesheet_tag }}
+  {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  {% endif %}
+
+
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -80,6 +89,51 @@
         <div data-quickview-content class="Modal-content">
         </div>
     </section>
+  
+  
+  
+  {% if template == 'index' %}
+  {% if settings.home_vendor_carousel_enable %} 
+  {{ 'slick.min.js' | asset_url | script_tag }}
+   <script type="text/javascript">
+   $(document).ready(function() {
+   $('.imgcontentslider').slick({
+     dots: true,
+     infinite: true,
+     speed: 500,
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     autoplay: true,
+     autoplaySpeed: 2000,
+     arrows: true,
+     fade: true,
+   });
+   });
+   </script>
+  {% endif %}
+  {% endif %}
+  
+  
+  {% if template == 'index' %}
+  {% if settings.instagram_app_enable %} 
+  {{ 'slick.min.js' | asset_url | script_tag }}
+   <script type="text/javascript">
+   $(document).ready(function() {
+   $('.instaslider').slick({
+     dots: false,
+     infinite: true,
+     speed: 500,
+     slidesToShow: 4,
+     slidesToScroll: 1,
+     autoplay: true,
+     autoplaySpeed: 2000,
+     arrows: false
+   });
+   });
+   </script>
+  {% endif %}
+  {% endif %}
+  
 </body>
 
 </html>

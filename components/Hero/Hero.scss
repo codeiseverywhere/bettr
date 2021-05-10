@@ -183,10 +183,20 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
   background-color: $grey;
   min-height: 312px;
   height: auto;
-  right: 7%;
   padding: 50px;
   top: 50%;
   @extend .translateY50;
+  &.boxpos-right {
+    right: 7%;
+  }
+  &.boxpos-left {
+    left: 7%;
+  }
+  &.boxpos-center {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 .Hero-slide__text-box {
   width: 100%;
@@ -334,12 +344,19 @@ $Hero-breakpoint--height-xs_max: ($Hero-breakpoint--height-xs - 1px);
     max-width: 100%;
     padding: 40px 25px 30px;
     right: 0;
+    left: 0;
     top: 0;
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
     transform: none;
+    &.boxpos-left, 
+    &.boxpos-right,
+    &.boxpos-center {
+      left: 0;
+      right:0;
+    }  
   }
   .Hero-slide__text-box {
     text-align: center;

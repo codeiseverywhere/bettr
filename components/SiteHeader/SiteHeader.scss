@@ -178,8 +178,13 @@ $SiteHeader--z_index: {{ settings.siteHeader-z-index }};
         align-items: center;
         height: 100%;
         li {
-            margin: 0 15px;
+            margin: 0;
             line-height: 0;
+            height: 100%;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                border-bottom: 1px solid $white;                    
+            }
             a {
                 color: $white;
                 font-family: $defaultFam;
@@ -187,6 +192,12 @@ $SiteHeader--z_index: {{ settings.siteHeader-z-index }};
                 font-weight: 600;
                 letter-spacing: 1px;
                 line-height: 16px;
+                line-height: 45px;
+                display: inline-block;
+                margin: 0 15px;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

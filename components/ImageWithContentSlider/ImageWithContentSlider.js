@@ -68,4 +68,5 @@
     toggle.addEventListener('click', (e) => slideHandler(e, toggleID))
   });
   });
+  
 }());

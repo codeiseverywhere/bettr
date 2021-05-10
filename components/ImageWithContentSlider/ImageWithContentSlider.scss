@@ -29,5 +29,107 @@ $photo-content-slider--height-xs_max: ($photo-content-slider--height-xs - 1px);
 
 .photo-content-slider {
   width: 100vw;
+  .slick-dotted.slick-slider {
+  	margin-bottom: 0;
+  }
 }
 
+.imgcontentslider {
+	.inner-slide {
+		display: flex;
+		min-height: 585px;
+	}
+	.slide-img {
+    	width: 50%;
+    	background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.slide-content {
+		background: $grey;
+		text-align: center;
+		width: 50%;		
+		padding-top: 160px;
+	}
+	.p-lg {
+		max-width: 458px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+	.sm-p {
+		opacity: 0.5;
+		letter-spacing: 1;
+		color: $white;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	.slick-dots li {
+		display: none;
+	}
+	.slick-dots li.slick-active, 
+	.slick-dots li:last-child {
+		display: inline-block;
+	}
+	.slick-dots li:last-child::before {
+	    content: '/';
+	    color: #fff;
+	    font-size: 12px;
+	    position: relative;
+	    left: -14px;
+	    bottom: -28px;
+	}
+	.slick-dots li button {
+		color: $white;
+		font-family: $defaultFam;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 2px;
+		line-height: 15px;
+	}
+	.slick-dots {
+		width: 50%;
+		right: 0;
+		bottom: 53px;
+	}
+	.slick-dots li button::before {
+		content: none;
+	}
+	.slick-prev, .slick-next {
+		top: auto;
+		bottom: 41px;
+	}
+	.slick-prev {
+	    left: auto;
+	    right: calc(25% + 50px);
+	    z-index: 10;
+	}
+	.slick-next {
+		right: calc(25% - 60px);
+		z-index: 10;
+	}
+	.slick-prev::before, .slick-next::before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		border-bottom: 2px solid $white;
+		z-index: 10;
+	}
+	.slick-prev::before {
+		border-left: 2px solid $white;
+		border-bottom: 2px solid $white;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg); 
+	}
+	.slick-next::before {
+		border-right: 2px solid $white;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg); 
+	}
+}

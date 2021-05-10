@@ -103,3 +103,27 @@ $QuizHeroHeader--breakpoint: $Viewport-sm;
 .QuizHeroHeader-valign--top {
     vertical-align: top;
 }
+
+
+.quiz-section {
+    background-color: $black;
+    .container {
+        position: relative;
+    }
+    .quiz-bg {
+        min-height: 546px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }   
+    .quiz-blurb {
+        position: absolute;
+        top: 50%; 
+        left: 67px;
+        @extend .translateY50;
+        max-width: 390px;
+    }
+    p {
+        opacity: 0.8;
+    }
+}

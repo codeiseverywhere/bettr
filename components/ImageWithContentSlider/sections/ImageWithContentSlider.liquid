@@ -1,7 +1,32 @@
 
-<div id="photo-content-slider" class="photo-content-slider" data-autoplay="{{ section.settings.autoplay }}">
-  You HTML will be here and this is available in component/ImageWithContentSlider
-  on click of arrow image, content and numbers will change
+<div id="photo-content-slider" class="photo-content-slider" data-autoplay="{{ section.settings.autoplay }}"> 
+  
+  {% if settings.home_vendor_carousel_enable %}
+  <center><h2>{{ settings.home_vendor_carousel_title }}</h2></center>
+  <div class="slider-container">
+   <div class="slider imgcontentslider slider-custom">
+   {% for i in (1..12) %}
+   {% capture vendor %}home_vendor_enable_{{i}}{% endcapture %}
+   {% capture vendor_logo %}vendor_logo_{{i}}.png{% endcapture %}
+   {% capture vendor_text %}home_vendor_text_{{i}}{% endcapture %}
+   {% capture vendor_name %}home_vendor_name_{{i}}{% endcapture %}
+   {% if settings[vendor] %}
+   <div>
+     <div class="inner-slide">
+       <div class="slide-img" style="background-image: url({{ vendor_logo | asset_url }});"></div>
+       <div class="slide-content">
+         <p class="p-lg">{{ settings[vendor_text] }}</p>
+         <span class="sm-p">{{ settings[vendor_name] }}</span>
+       </div>
+     </div>  
+   </div>
+   {% endif %}
+   {% endfor %}
+   </div>
+  </div> 
+  {% endif %}
+  
+
 </div>
 
 

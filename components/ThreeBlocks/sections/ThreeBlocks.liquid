@@ -1,32 +1,33 @@
 
-<div id="three-blocks" class="three-blocks">
-  <div class="tb__inner">
-
-    <div class="tb__section-title-wrap">
-      <h4 class="tb__section-title">
-        {{ section.settings.section-title }}
-      </h4>
-      <p>{{ section.settings.section-desc }}</p>
+<div id="three-blocks" class="three-blocks value-prop text-align-center">
+  <div class="tb__inner container">
+    
+    <div class="section-space"></div>
+    <h3>Why Men Need Skincare</h3>
+    <p>Lorem ipsum dolor sit amet, et consectetur adipisicing elit.</p>
+    <div class="value-props">
+      <div class="item">
+        <img src="{{ 'prop-img.png' | asset_img_url: '' }}" class="prop-img">
+        <h4>Value Prop</h4>
+        <p>Lorem ipsum dolor sit amet, et consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+      <div class="item">
+        <img src="{{ 'prop-img.png' | asset_img_url: '' }}" class="prop-img">
+        <h4>Value Prop</h4>
+        <p>Lorem ipsum dolor sit amet, et consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      </div>
+      <div class="item">
+        <img src="{{ 'prop-img.png' | asset_img_url: '' }}" class="prop-img">
+        <h4>Value Prop</h4>
+        <p>Lorem ipsum dolor sit amet, et consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+      <div class="item">
+        <img src="{{ 'prop-img.png' | asset_img_url: '' }}" class="prop-img">
+        <h4>Value Prop</h4>
+        <p>Lorem ipsum dolor sit amet, et consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
     </div>
-This file is in components/threeblocks
-    <div class="tb__content">
-      {% for block in section.blocks %}
-        <div class="tb__block">
-          <div class="tb__block-inner">
-          <div class="tb__block-image-wrap">
-            <img src="{{ block.settings.image | img_url: 'master' }}" class="tb__block-image" >
-          </div>
-            
-            <h5 class="tb__block-title">
-              {{ block.settings.title }}
-            </h5>
-            <p class="tb__block-text">
-              {{ block.settings.text }}
-            </p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+    <div class="section-space"></div>
 
   </div>
 </div>

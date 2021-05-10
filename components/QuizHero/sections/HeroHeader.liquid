@@ -10,15 +10,20 @@
 }
 </style>
 
-<header class="QuizHeroHeader QuizHeroHeader--{{ section.settings.size }} QuizHeroHeader--{{ section.settings.background_color }} QuizHeroHeader--{{section.settings.image_focus}}" style="background-image: url({{ section.settings.background_image | img_url: 'original' }});">
-    <div class="QuizHeroHeader-valign QuizHeroHeader-valign--{{section.settings.alignment}}">
-        <div class="QuizHeroHeader-container">
-            <h1 class="QuizHeroHeader-title">{{ section.settings.title }}</h1>
-            {{ section.settings.content }}
-        </div>
+<div class="quiz-section">
+  <div class="container">
+    <div class="quiz-inner">
+      <div class="quiz-bg" style="background-image: url({{ 'quiz-bg.png' | asset_img_url: '' }});">      
+      </div>
+      <div class="quiz-blurb">
+        <h2>Quiz lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <a href="#" class="ctaDefault Quiz-Hero-text-box__cta">Take Our Skin Quiz</a>
+      </div>
     </div>
-</header>
-This is inside component/QuizHero folder, For CTA color, use above classes 
+  </div>
+</div>
+
 {% schema %}
     {
         "name": "Quiz Header",

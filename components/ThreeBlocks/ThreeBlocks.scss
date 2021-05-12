@@ -135,3 +135,35 @@ $ThreeBlocks-breakpoint_max: ($ThreeBlocks-breakpoint - 1px);
     margin: 0 0 15px 0;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .value-prop .item {
+    margin-right: 20px;
+  }
+  .value-prop .item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .value-prop { 
+    padding: 0; 
+    h3 {
+      font-size: 28px;
+      line-height: 37px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .value-props {
+      flex-wrap: wrap;
+      padding-top: 0;
+    }
+    .item {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-top: 50px;
+    }
+  }
+}

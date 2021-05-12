@@ -1,0 +1,98 @@
+<style>
+.Quiz-Hero-text-box__cta {
+  color: {{ section.settings.cta-color }};
+  background-color: {{ section.settings.cta-bg-color }};
+}
+.Quiz-Hero-text-box__cta:hover {
+  color: {{ section.settings.cta-hover-color }};
+  background-color: {{ section.settings.cta-hover-bg-color }};
+  border:1px solid {{ section.settings.cta-hover-border-color }};
+}
+</style>
+
+<div class="quiz-section">
+  <div class="container">
+    <div class="quiz-inner">
+      <div class="quiz-bg" style="background-image: url({{ 'quiz-bg.png' | asset_img_url: '' }});">      
+      </div>
+      <div class="quiz-blurb">
+        <h2>Quiz lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <a href="#" class="ctaDefault Quiz-Hero-text-box__cta">Take Our Skin Quiz</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Quiz Header",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading"
+            },
+            {
+                "type": "textarea",
+                "id": "content",
+                "label": "Text"
+            },
+            {
+                "type": "image_picker",
+                "id": "background_image",
+                "label": "Header BG"
+            },
+            {
+               "type": "radio",
+               "id": "alignment",
+               "label": "Text Alignment",
+               "options": [
+                        { "value": "left", "label": "Left Aligned" },
+                        { "value": "right", "label": "Right Aligned" },
+                        { "value": "center", "label": "Place in Center" }
+                    ]
+           },
+           {
+               "type": "color",
+               "id": "cta-color",
+               "label": "Slide CTA Text Color",
+               "default": "#000"
+            },
+            {
+               "type": "color",
+               "id": "cta-bg-color",
+               "label": "Slide CTA Background Color",
+               "default": "#FFF003"
+            },
+            {
+               "type": "header",
+               "content": "CTA Mouseover settings"
+            },
+            {
+               "type": "color",
+               "id": "cta-hover-color",
+               "label": "Slide CTA Hover Text Color",
+               "default": "#000"
+            },
+            {
+              "type": "color",
+              "id": "cta-hover-bg-color",
+              "label": "Slide CTA Hover Background Color",
+              "default": "#FFF003"
+            },
+            {
+              "type": "color",
+              "id": "cta-hover-border-color",
+              "label": "Slide CTA Hover Border Color",
+              "default": "#fff"
+            }
+        ],
+        "presets": [
+            {   
+                "category": "Quiz Hero",
+                "name": "Quiz Hero"
+            }
+        ]
+    }
+{% endschema %}

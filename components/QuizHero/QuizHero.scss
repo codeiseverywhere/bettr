@@ -127,3 +127,38 @@ $QuizHeroHeader--breakpoint: $Viewport-sm;
         opacity: 0.8;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .quiz-section {
+        .quiz-bg {
+            min-height: 250px;
+            margin-bottom: 30px;
+            background-position: center right;
+        }
+        .quiz-blurb {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+        h2 {
+            color: $white;
+            font-size: 28px;
+            line-height: 37px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $white;
+        }
+        .ctaDefault {
+            width: 100%;
+        }
+    }
+}

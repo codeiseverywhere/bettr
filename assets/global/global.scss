@@ -81,6 +81,7 @@ html {
 			h3 {
 				font-size: 24px;
 				line-height: 32px;
+				margin: 0 0 15px 0;
 			}
 			h4 {
 				font-size: 18px;
@@ -93,6 +94,7 @@ html {
 			p {
 				font-size: 16px;
 				line-height: 28px;
+				margin: 0 0 25px 0;
 			}
 		}
 	}
@@ -355,6 +357,11 @@ hr {
 	line-height: 47px;
 }
 
+@media screen and (max-width: 1200px) {
+	.container {
+		padding: 0 25px;
+	}
+}
 @media screen and (min-width: 992px) {
 	html {
 		body {
@@ -374,5 +381,16 @@ hr {
 				margin: 20px 0;
 			}
 		}
+	}
+
+
+	.sm-title {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 9px;
+	}
+	.p-lg {
+		font-size: 24px;
+		line-height: 32px;
 	}
 }

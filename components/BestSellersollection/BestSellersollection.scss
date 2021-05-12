@@ -97,14 +97,15 @@ $BestSellersCollection-breakpoint--custom-6: 420px;
 @media screen and (max-width: $BestSellersCollection-breakpoint--custom-5) {
   .x-fc__btn {
     margin-top: 15px;
-    height: 40px;
   }
   .x-fc__btn-price,
   .x-fc__btn-text {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
+  .x-fc__btn-price {display:none;}
 }
+
 .quick-view-popup {
 	min-height: 765px;
 	position: relative;
@@ -206,5 +207,37 @@ $BestSellersCollection-breakpoint--custom-6: 420px;
 body.quickview-open {
 	.quick-view-popup {
 		@extend .transScale1;
+	}
+}
+
+
+
+@media screen and (max-width: 1200px){
+	.bestseller-products {
+		.bestseller-product {
+			max-width: 24%;
+			position: relative;
+			padding-bottom: 50px;
+			.site-btn {
+				min-width: auto;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px){
+	.bestseller-products {
+		flex-wrap: wrap;
+		.bestseller-product {
+			max-width: 48%;
+			margin-top: 30px;
+		}
+		.sm-p {
+			margin-bottom: 15px;
+		}
+		form {
+			margin-bottom: 0;
+		}
 	}
 }

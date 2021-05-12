@@ -3985,16 +3985,7 @@ if (!Array.prototype.indexOf) {
         }
     });
 }(window.Handlebars, window.Shopify));
-jQuery(document).ready(function(){
-  jQuery('.quickview').click(function(e){
-    e.preventDefault();
-    jQuery('body').addClass('quickview-open');
-  });
-  jQuery('.close-quickview').click(function(f){
-    f.preventDefault();
-    jQuery('body').removeClass('quickview-open');
-  });
-});
+
 /*global define, console, document, window*/
 (function (root, factory) {
     "use strict";
@@ -4126,6 +4117,78 @@ jQuery(document).ready(function(){
 
     return module;
 }));
+
+(function () {
+  //this feature of this section not currently in use. when dropdown code is is made active, this code should be made active as well.
+  // window.addEventListener("DOMContentLoaded", () => {
+  //   const placeholderWrapper = document.querySelector(
+  //     ".dwi__dropdown-placeholder"
+  //   );
+  //   const outerMost = document.querySelector(".dwi__dropdown");
+  //   const placeholderText = document.querySelector(".dwi__option-text");
+  //   const dropDownWrapper = document.querySelector(".dwi__dropdown-options");
+  //   const arrow = document.querySelector(".dwi__arrow");
+  //   const options = document.querySelectorAll(".dwi__dropdown-option");
+  //   //Set Selected Option to LocalStorage to reference later
+  //   const setLocalStorage = (value) => {
+  //     localStorage.setItem("q1", value);
+  //   };
+  //   //Set initial value to option placeholder
+  //   placeholderText.innerHTML = options[0].innerHTML;
+  //   //Set initial value to LocalStorage
+  //   let initValue = options[0].dataset.option;
+  //   setLocalStorage(initValue);
+  //   //Update value of option placeholder
+  //   const selectedOptionHandler = (id, html, value) => {
+  //     const text = html;
+  //     placeholderText.innerHTML = text;
+  //     statusHandler();
+  //     setLocalStorage(value);
+  //   };
+  //   options.forEach((option) => {
+  //     let id = option.id.split("-")[1];
+  //     let html = option.innerHTML;
+  //     let value = option.dataset.option;
+  //     option.addEventListener(
+  //       "click",
+  //       (e) => {
+  //         selectedOptionHandler(id, html, value);
+  //       },
+  //       { capture: true }
+  //     );
+  //   });
+  //   //Drop and Raise DropDown
+  //   let dropDownStatus = "closed";
+  //   const statusHandler = () => {
+  //     const secondClass = dropDownWrapper.classList[1];
+  //     if (secondClass === "dwi__dropdown-closed") {
+  //       dropDownStatus = "closed";
+  //     } else {
+  //       dropDownStatus = "open";
+  //     }
+  //     dropDownHandler();
+  //   };
+  //   const dropDownHandler = () => {
+  //     if (dropDownStatus === "closed") {
+  //       dropDownWrapper.classList.remove("dwi__dropdown-closed");
+  //       dropDownWrapper.classList.add("dwi__dropdown-open");
+  //       arrow.classList.add("dwi__flip-arrow");
+  //     } else if (dropDownStatus === "open") {
+  //       dropDownWrapper.classList.add("dwi__dropdown-closed");
+  //       dropDownWrapper.classList.remove("dwi__dropdown-open");
+  //       arrow.classList.remove("dwi__flip-arrow");
+  //     }
+  //   };
+  //   const closeDropDown = () => {
+  //     dropDownWrapper.classList.add("dwi__dropdown-closed");
+  //     dropDownWrapper.classList.remove("dwi__dropdown-open");
+  //     arrow.classList.remove("dwi__flip-arrow");
+  //     dropDownStatus = "closed";
+  //   };
+  //   placeholderWrapper.addEventListener("click", statusHandler);
+  //   outerMost.addEventListener("mouseleave", closeDropDown);
+  // });
+})();
 
 /* Paginate.js
  * A progressively-enhancing infinite scroll library
@@ -5037,29 +5100,6 @@ jQuery(document).ready(function(){
   });
 }());
 (function () {
-  $(document).ready(function () {
-    $(".hpq__m-slider").slick({
-      arrows: false,
-      draggable: true,
-      swipe: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      adaptiveHeight: true,
-      asNavFor: ".hpq__m-nav-slider",
-    });
-    $(".hpq__m-nav-slider").slick({
-      slidesToShow: "auto",
-      asNavFor: ".hpq__m-slider",
-      dots: false,
-      arrows: false,
-      centerMode: true,
-      focusOnSelect: true,
-      useTransform: false,
-    });
-  });
-})();
-
-(function () {
   window.addEventListener("DOMContentLoaded", () => {
     $(document).ready(function () {
       $(".hba__slider").slick({
@@ -5084,6 +5124,29 @@ jQuery(document).ready(function(){
   });
 })();
 
+(function () {
+  $(document).ready(function () {
+    $(".hpq__m-slider").slick({
+      arrows: false,
+      draggable: true,
+      swipe: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      asNavFor: ".hpq__m-nav-slider",
+    });
+    $(".hpq__m-nav-slider").slick({
+      slidesToShow: "auto",
+      asNavFor: ".hpq__m-slider",
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true,
+      useTransform: false,
+    });
+  });
+})();
+
 (function(){
 
   window.addEventListener('DOMContentLoaded', () => {
@@ -5100,6 +5163,10 @@ jQuery(document).ready(function(){
      fade: true,
    });
 
+  var lastnumb = $('.imgcontentslider .slick-dots li:last-child button').html();
+  var lastSpan = '<span>'+lastnumb+'</span>';
+  $('.imgcontentslider .slick-dots li:last-child').append(lastSpan);
+
   });
   
 }());
@@ -5112,475 +5179,42 @@ jQuery(document).ready(function(){
      dots: false,
      infinite: true,
      speed: 500,
+     autoplay: true,
+     autoplaySpeed: 5000,
+     arrows: false,
      slidesToShow: 4,
      slidesToScroll: 1,
-     autoplay: true,
-     autoplaySpeed: 2000,
-     arrows: false
+     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+   ]
    });
 
   });
   
 }());
-
-(function () {
-  //this feature of this section not currently in use. when dropdown code is is made active, this code should be made active as well.
-  // window.addEventListener("DOMContentLoaded", () => {
-  //   const placeholderWrapper = document.querySelector(
-  //     ".dwi__dropdown-placeholder"
-  //   );
-  //   const outerMost = document.querySelector(".dwi__dropdown");
-  //   const placeholderText = document.querySelector(".dwi__option-text");
-  //   const dropDownWrapper = document.querySelector(".dwi__dropdown-options");
-  //   const arrow = document.querySelector(".dwi__arrow");
-  //   const options = document.querySelectorAll(".dwi__dropdown-option");
-  //   //Set Selected Option to LocalStorage to reference later
-  //   const setLocalStorage = (value) => {
-  //     localStorage.setItem("q1", value);
-  //   };
-  //   //Set initial value to option placeholder
-  //   placeholderText.innerHTML = options[0].innerHTML;
-  //   //Set initial value to LocalStorage
-  //   let initValue = options[0].dataset.option;
-  //   setLocalStorage(initValue);
-  //   //Update value of option placeholder
-  //   const selectedOptionHandler = (id, html, value) => {
-  //     const text = html;
-  //     placeholderText.innerHTML = text;
-  //     statusHandler();
-  //     setLocalStorage(value);
-  //   };
-  //   options.forEach((option) => {
-  //     let id = option.id.split("-")[1];
-  //     let html = option.innerHTML;
-  //     let value = option.dataset.option;
-  //     option.addEventListener(
-  //       "click",
-  //       (e) => {
-  //         selectedOptionHandler(id, html, value);
-  //       },
-  //       { capture: true }
-  //     );
-  //   });
-  //   //Drop and Raise DropDown
-  //   let dropDownStatus = "closed";
-  //   const statusHandler = () => {
-  //     const secondClass = dropDownWrapper.classList[1];
-  //     if (secondClass === "dwi__dropdown-closed") {
-  //       dropDownStatus = "closed";
-  //     } else {
-  //       dropDownStatus = "open";
-  //     }
-  //     dropDownHandler();
-  //   };
-  //   const dropDownHandler = () => {
-  //     if (dropDownStatus === "closed") {
-  //       dropDownWrapper.classList.remove("dwi__dropdown-closed");
-  //       dropDownWrapper.classList.add("dwi__dropdown-open");
-  //       arrow.classList.add("dwi__flip-arrow");
-  //     } else if (dropDownStatus === "open") {
-  //       dropDownWrapper.classList.add("dwi__dropdown-closed");
-  //       dropDownWrapper.classList.remove("dwi__dropdown-open");
-  //       arrow.classList.remove("dwi__flip-arrow");
-  //     }
-  //   };
-  //   const closeDropDown = () => {
-  //     dropDownWrapper.classList.add("dwi__dropdown-closed");
-  //     dropDownWrapper.classList.remove("dwi__dropdown-open");
-  //     arrow.classList.remove("dwi__flip-arrow");
-  //     dropDownStatus = "closed";
-  //   };
-  //   placeholderWrapper.addEventListener("click", statusHandler);
-  //   outerMost.addEventListener("mouseleave", closeDropDown);
-  // });
-})();
-
-(function () {
-  window.addEventListener("DOMContentLoaded", () => {
-    //--Sticky Add To Cart
-    const ATC = document.getElementById("Product__sticky-ATC");
-    const form = document.getElementById("Product-form");
-    const footer = document.getElementById("SiteFooter");
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    window.addEventListener("resize", (e) => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-    });
-    if (width < 870) {
-      window.addEventListener("scroll", (e) => {
-        const elRec = form.getBoundingClientRect();
-        const footerRec = footer.getBoundingClientRect();
-
-        if (elRec.bottom < 100) {
-          ATC.classList.add("Product__sticky-ATC--open");
-        } else {
-          ATC.classList.remove("Product__sticky-ATC--open");
-        }
-        if (footerRec.top < height) {
-          ATC.classList.remove("Product__sticky-ATC--open");
-        }
-      });
-    }
-
-    //--Size Picker
-    const hiddenInputs = document.querySelectorAll(".product-opton");
-    const circleOptions = document.querySelectorAll(
-      ".Product-details__form-option"
-    );
-    const optionHandler = (id) => {
-      const cID = id;
-      circleOptions.forEach((cOption) => {
-        const opID = cOption.dataset.key;
-        if (cID == opID) {
-          cOption.classList.add("Product-selected-option");
-          cOption.children[0].style.fontWeight = "700";
-        } else {
-          cOption.classList.remove("Product-selected-option");
-          cOption.children[0].style.fontWeight = "400";
-        }
-      });
-      hiddenInputs.forEach((input) => {
-        const iID = input.dataset.key;
-        if (cID == iID) {
-          input.selected = "selected";
-        } else {
-          input.selected = "";
-        }
-      });
-    };
-    circleOptions.forEach((option) => {
-      option.addEventListener("click", (e) =>
-        optionHandler(option.dataset.key)
-      );
-    });
-    //--Sliders
-    var galleryThumbs = new Swiper(".Product__slider-nav", {
-      direction: "vertical",
-      spaceBetween: 15,
-      slidesPerView: "auto",
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper(".Product__slider", {
-      spaceBetween: 10,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      loop: true,
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-      breakpoints: {
-        1000: {
-          slidesPerView: 1,
-        },
-      },
-    });
-
-    //--Quantity Selector
-    const input = document.getElementById("Product-qs-input");
-    const placeholder = document.querySelector(".Product-qs-value-text");
-    const plus = document.querySelector(".Product-qs-plus");
-    const minus = document.querySelector(".Product-qs-minus");
-    const incVal = () => {
-      let value = input.value;
-      const newVal = ++value;
-      setNewVals(newVal);
-    };
-    const decVal = () => {
-      let value = input.value;
-      const newVal = --value;
-      if (newVal < 1) {
-        setNewVals(newVal);
-      } else {
-        setNewVals(newVal);
-      }
-    };
-    const setNewVals = (newVal) => {
-      const value = newVal;
-      if (value < 1) {
-        input.value = 1;
-        placeholder.innerHTML = 1;
-      } else {
-        input.value = value;
-        placeholder.innerHTML = value;
-      }
-    };
-    plus.addEventListener("click", incVal);
-    minus.addEventListener("click", decVal);
-
-    //--Accordion
-    const drawers = document.querySelectorAll(".pd__accordion-drawer");
-    const drawerHandler = (id) => {
-      const ID = id.split("-")[1];
-      drawers.forEach((drawer) => {
-        const dID = drawer.id.split("-")[1];
-        if (ID == dID) {
-          if (drawer.classList.length > 1) {
-            closeAllDrawers();
-          } else {
-            drawer.classList.add("pd__accordion-drawer-open");
-          }
-        } else {
-          drawer.classList.remove("pd__accordion-drawer-open");
-        }
-      });
-    };
-    const closeAllDrawers = () => {
-      drawers.forEach((drawer) => {
-        drawer.classList.remove("pd__accordion-drawer-open");
-      });
-    };
-    drawers.forEach((drawer) => {
-      drawer.addEventListener("click", (e) => drawerHandler(drawer.id));
-    });
-
-    //Ingredients
-    $(document).ready(function () {
-      $(".pi__slider").slick({
-        arrows: false,
-        draggable: true,
-        swipe: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        asNavFor: ".pi__slider-nav",
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              draggable: true,
-              swipe: true,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              adaptiveHeight: true,
-              infinite: true,
-              autoplay: true,
-              autoplaySpeed: 5000,
-            },
-          },
-        ],
-      });
-      $(".pi__slider-nav").slick({
-        slidesToShow: "auto",
-        asNavFor: ".pi__slider",
-        dots: false,
-        arrows: false,
-        centerMode: true,
-        focusOnSelect: true,
-        useTransform: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              dots: false,
-              arrows: false,
-              centerMode: true,
-              focusOnSelect: true,
-              useTransform: true,
-            },
-          },
-        ],
-      });
-    });
-  });
-})();
-
-/*global define, console*/
-
-(function (root, factory) {
-    "use strict";
-    if (typeof define === 'function' && define.amd) {
-        define("ScrollEffects", ["jquery", "Behaviors"], factory);
-    } else {
-        root.ScrollEffects = factory(root.jQuery, root.Behaviors);
-    }
-}(this, function ($, Behaviors) {
-    "use strict";
-
-    var module = {};
-
-    function ScrollEffects(elem) {
-        Behaviors.init(ScrollEffects, this, arguments);
-
-        this.$elem = $(elem);
-        this.$scrollCtxt = $(window); //TODO: Allow CSS overflow scrolling
-        
-        this.scrollHandler = this.on_scroll_intent.bind(this);
-
-        this.$scrollCtxt.on("scroll", this.scrollHandler);
-    }
-
-    Behaviors.inherit(ScrollEffects, Behaviors.Behavior);
-
-    ScrollEffects.QUERY = "[data-scrolleffects]";
-    ScrollEffects.THROTTLE_TIMEOUT = 200;
-    
-    /* Deinitialize our scroll handler if needed.
-     */
-    ScrollEffects.prototype.deinitialize = function () {
-        this.$scrollCtxt.off("scroll", this.scrollHandler);
-    };
-    
-    /* Return a list of all available scroll effect modes on this bit.
-     */
-    ScrollEffects.prototype.activation_modes = function () {
-        return this.$elem.data("scrolleffects").split(" ");
-    };
-
-    ScrollEffects.prototype.update_css_classes = function () {
-        var activation_modes = this.activation_modes(),
-            active = false;
-
-        if (this.isTopVisible && activation_modes.indexOf("top_visible") !== -1) {
-            active = true;
-        }
-
-        if (this.isBottomVisible && activation_modes.indexOf("bottom_visible") !== -1) {
-            active = true;
-        }
-
-        if (this.isVisible && activation_modes.indexOf("visible") !== -1) {
-            active = true;
-        }
-
-        if (this.onceTopVisible && activation_modes.indexOf("top_visible_once") !== -1) {
-            active = true;
-        }
-
-        if (this.onceBottomVisible && activation_modes.indexOf("bottom_visible_once") !== -1) {
-            active = true;
-        }
-
-        if (this.onceVisible && activation_modes.indexOf("visible_once") !== -1) {
-            active = true;
-        }
-
-        if (active) {
-            this.$elem.addClass("is-ScrollEffects--active");
-            this.$elem.removeClass("is-ScrollEffects--inactive");
-        } else {
-            this.$elem.removeClass("is-ScrollEffects--active");
-            this.$elem.addClass("is-ScrollEffects--inactive");
-        }
-    };
-
-    ScrollEffects.prototype.on_scroll_intent = function () {
-        var top = this.$elem.offset().top,
-            height = this.$elem.height(),
-            bottom = top + height,
-            contextOffset = this.$scrollCtxt.offset(),
-            contextScrollTop = contextOffset !== undefined
-                                ? contextOffset.top + this.$scrollCtxt.scrollTop()
-                                : this.$scrollCtxt.scrollTop(),
-            contextHeight = this.$scrollCtxt.height(),
-            contextScrollBottom = contextScrollTop + contextHeight;
-
-        this.isTopVisible = contextScrollTop <= top && top <= contextScrollBottom;
-        this.isBottomVisible = contextScrollTop <= bottom && bottom <= contextScrollBottom;
-        this.isVisible = this.isTopVisible || this.isBottomVisible
-            || (top <= contextScrollTop && contextScrollTop <= bottom)
-            || (top <= contextScrollBottom && contextScrollBottom <= bottom);
-
-        this.onceTopVisible = this.onceTopVisible || this.isTopVisible;
-        this.onceBottomVisible = this.onceBottomVisible || this.isBottomVisible;
-        this.onceVisible = this.onceVisible || this.isVisible;
-
-        this.top = top;
-        this.bottom = bottom;
-        this.contextScrollTop = contextScrollTop;
-        this.contextScrollBottom = contextScrollBottom;
-
-        this.update_css_classes();
-    };
-
-    Behaviors.register_behavior(ScrollEffects);
-
-    function ScrollAlax() {
-        Behaviors.init(ScrollAlax, this, arguments);
-
-        this.$layers = this.$elem.find("li");
-        this.depth = this.$elem.height() * -0.5;
-
-        if (this.$elem.data('scrollalax-depthrange') === 'outside') {
-            this.anim_scale = 1;
-        } else {
-            this.anim_scale = -1;
-        }
-
-        this.weights = this.weight_layers(this.$layers);
-
-        this.on_scroll_intent();
-    }
-
-    Behaviors.inherit(ScrollAlax, ScrollEffects);
-
-    ScrollAlax.QUERY = "[data-scrollalax]";
-
-    /* Determine the weights of each layer on the parallax group. */
-    ScrollAlax.prototype.weight_layers = function ($layers) {
-        var min = Infinity, max = -Infinity, w = [];
-
-        $layers.each(function (index, elem) {
-            var depth = $(elem).data("scrollalax-depth");
-
-            if (min > depth) {
-                min = depth;
-            }
-
-            if (max < depth) {
-                max = depth;
-            }
-        }.bind(this));
-
-        $layers.each(function (index, elem) {
-            var depth = $(elem).data("scrollalax-depth");
-
-            if (this.anim_scale === -1) {
-                w.push(-1 + (depth - min) / (max - min));
-            } else {
-                w.push((depth - min) / (max - min));
-            }
-        }.bind(this));
-
-        return w;
-    }
-
-    /* Calculate X or Y positions of a layer. */
-    ScrollAlax.prototype.apply_transform_css = function(style, index, xPct, yPct) {
-        var pct_Xdrag = this.weights[index] * xPct * this.anim_scale,
-            pct_Ydrag = this.weights[index] * yPct * this.anim_scale,
-            xDisp = this.depth * pct_Xdrag * this.anim_scale,
-            yDisp = this.depth * pct_Ydrag * this.anim_scale;
-
-        //style.left = xDisp + "px";
-        //style.top = yDisp + "px";
-
-        style.transform = "translate3D(" + xDisp + "px, " + yDisp + "px, 0px)";
-    };
-
-    /* Update the scroll animation. */
-    ScrollAlax.prototype.update_css_classes = function (evt) {
-        this.$layers.each(function (index, layer_elem) {
-            var pct_down = Math.max(Math.min((this.contextScrollTop - this.top) / this.$elem.height(), 1.0), 0.0),
-                $layer_elem = $(layer_elem);
-
-            this.apply_transform_css(layer_elem.style, index, 0, pct_down);
-        }.bind(this));
-    };
-
-    Behaviors.register_behavior(ScrollAlax);
-
-    module.ScrollEffects = ScrollEffects;
-    module.ScrollAlax = ScrollAlax;
-
-    return module;
-}));
 
 /*global define, console, document, window, Promise*/
 (function (root, factory) {
@@ -5996,6 +5630,393 @@ jQuery(document).ready(function(){
     return module;
 }));
 
+(function () {
+  window.addEventListener("DOMContentLoaded", () => {
+    //--Sticky Add To Cart
+    const ATC = document.getElementById("Product__sticky-ATC");
+    const form = document.getElementById("Product-form");
+    const footer = document.getElementById("SiteFooter");
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    window.addEventListener("resize", (e) => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+    });
+    if (width < 870) {
+      window.addEventListener("scroll", (e) => {
+        const elRec = form.getBoundingClientRect();
+        const footerRec = footer.getBoundingClientRect();
+
+        if (elRec.bottom < 100) {
+          ATC.classList.add("Product__sticky-ATC--open");
+        } else {
+          ATC.classList.remove("Product__sticky-ATC--open");
+        }
+        if (footerRec.top < height) {
+          ATC.classList.remove("Product__sticky-ATC--open");
+        }
+      });
+    }
+
+    //--Size Picker
+    const hiddenInputs = document.querySelectorAll(".product-opton");
+    const circleOptions = document.querySelectorAll(
+      ".Product-details__form-option"
+    );
+    const optionHandler = (id) => {
+      const cID = id;
+      circleOptions.forEach((cOption) => {
+        const opID = cOption.dataset.key;
+        if (cID == opID) {
+          cOption.classList.add("Product-selected-option");
+          cOption.children[0].style.fontWeight = "700";
+        } else {
+          cOption.classList.remove("Product-selected-option");
+          cOption.children[0].style.fontWeight = "400";
+        }
+      });
+      hiddenInputs.forEach((input) => {
+        const iID = input.dataset.key;
+        if (cID == iID) {
+          input.selected = "selected";
+        } else {
+          input.selected = "";
+        }
+      });
+    };
+    circleOptions.forEach((option) => {
+      option.addEventListener("click", (e) =>
+        optionHandler(option.dataset.key)
+      );
+    });
+    //--Sliders
+    var galleryThumbs = new Swiper(".Product__slider-nav", {
+      direction: "vertical",
+      spaceBetween: 15,
+      slidesPerView: "auto",
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper(".Product__slider", {
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      loop: true,
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+      breakpoints: {
+        1000: {
+          slidesPerView: 1,
+        },
+      },
+    });
+
+    //--Quantity Selector
+    const input = document.getElementById("Product-qs-input");
+    const placeholder = document.querySelector(".Product-qs-value-text");
+    const plus = document.querySelector(".Product-qs-plus");
+    const minus = document.querySelector(".Product-qs-minus");
+    const incVal = () => {
+      let value = input.value;
+      const newVal = ++value;
+      setNewVals(newVal);
+    };
+    const decVal = () => {
+      let value = input.value;
+      const newVal = --value;
+      if (newVal < 1) {
+        setNewVals(newVal);
+      } else {
+        setNewVals(newVal);
+      }
+    };
+    const setNewVals = (newVal) => {
+      const value = newVal;
+      if (value < 1) {
+        input.value = 1;
+        placeholder.innerHTML = 1;
+      } else {
+        input.value = value;
+        placeholder.innerHTML = value;
+      }
+    };
+    plus.addEventListener("click", incVal);
+    minus.addEventListener("click", decVal);
+
+    //--Accordion
+    const drawers = document.querySelectorAll(".pd__accordion-drawer");
+    const drawerHandler = (id) => {
+      const ID = id.split("-")[1];
+      drawers.forEach((drawer) => {
+        const dID = drawer.id.split("-")[1];
+        if (ID == dID) {
+          if (drawer.classList.length > 1) {
+            closeAllDrawers();
+          } else {
+            drawer.classList.add("pd__accordion-drawer-open");
+          }
+        } else {
+          drawer.classList.remove("pd__accordion-drawer-open");
+        }
+      });
+    };
+    const closeAllDrawers = () => {
+      drawers.forEach((drawer) => {
+        drawer.classList.remove("pd__accordion-drawer-open");
+      });
+    };
+    drawers.forEach((drawer) => {
+      drawer.addEventListener("click", (e) => drawerHandler(drawer.id));
+    });
+
+    //Ingredients
+    $(document).ready(function () {
+      $(".pi__slider").slick({
+        arrows: false,
+        draggable: true,
+        swipe: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        asNavFor: ".pi__slider-nav",
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              draggable: true,
+              swipe: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              adaptiveHeight: true,
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 5000,
+            },
+          },
+        ],
+      });
+      $(".pi__slider-nav").slick({
+        slidesToShow: "auto",
+        asNavFor: ".pi__slider",
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        focusOnSelect: true,
+        useTransform: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              dots: false,
+              arrows: false,
+              centerMode: true,
+              focusOnSelect: true,
+              useTransform: true,
+            },
+          },
+        ],
+      });
+    });
+  });
+})();
+
+/*global define, console*/
+
+(function (root, factory) {
+    "use strict";
+    if (typeof define === 'function' && define.amd) {
+        define("ScrollEffects", ["jquery", "Behaviors"], factory);
+    } else {
+        root.ScrollEffects = factory(root.jQuery, root.Behaviors);
+    }
+}(this, function ($, Behaviors) {
+    "use strict";
+
+    var module = {};
+
+    function ScrollEffects(elem) {
+        Behaviors.init(ScrollEffects, this, arguments);
+
+        this.$elem = $(elem);
+        this.$scrollCtxt = $(window); //TODO: Allow CSS overflow scrolling
+        
+        this.scrollHandler = this.on_scroll_intent.bind(this);
+
+        this.$scrollCtxt.on("scroll", this.scrollHandler);
+    }
+
+    Behaviors.inherit(ScrollEffects, Behaviors.Behavior);
+
+    ScrollEffects.QUERY = "[data-scrolleffects]";
+    ScrollEffects.THROTTLE_TIMEOUT = 200;
+    
+    /* Deinitialize our scroll handler if needed.
+     */
+    ScrollEffects.prototype.deinitialize = function () {
+        this.$scrollCtxt.off("scroll", this.scrollHandler);
+    };
+    
+    /* Return a list of all available scroll effect modes on this bit.
+     */
+    ScrollEffects.prototype.activation_modes = function () {
+        return this.$elem.data("scrolleffects").split(" ");
+    };
+
+    ScrollEffects.prototype.update_css_classes = function () {
+        var activation_modes = this.activation_modes(),
+            active = false;
+
+        if (this.isTopVisible && activation_modes.indexOf("top_visible") !== -1) {
+            active = true;
+        }
+
+        if (this.isBottomVisible && activation_modes.indexOf("bottom_visible") !== -1) {
+            active = true;
+        }
+
+        if (this.isVisible && activation_modes.indexOf("visible") !== -1) {
+            active = true;
+        }
+
+        if (this.onceTopVisible && activation_modes.indexOf("top_visible_once") !== -1) {
+            active = true;
+        }
+
+        if (this.onceBottomVisible && activation_modes.indexOf("bottom_visible_once") !== -1) {
+            active = true;
+        }
+
+        if (this.onceVisible && activation_modes.indexOf("visible_once") !== -1) {
+            active = true;
+        }
+
+        if (active) {
+            this.$elem.addClass("is-ScrollEffects--active");
+            this.$elem.removeClass("is-ScrollEffects--inactive");
+        } else {
+            this.$elem.removeClass("is-ScrollEffects--active");
+            this.$elem.addClass("is-ScrollEffects--inactive");
+        }
+    };
+
+    ScrollEffects.prototype.on_scroll_intent = function () {
+        var top = this.$elem.offset().top,
+            height = this.$elem.height(),
+            bottom = top + height,
+            contextOffset = this.$scrollCtxt.offset(),
+            contextScrollTop = contextOffset !== undefined
+                                ? contextOffset.top + this.$scrollCtxt.scrollTop()
+                                : this.$scrollCtxt.scrollTop(),
+            contextHeight = this.$scrollCtxt.height(),
+            contextScrollBottom = contextScrollTop + contextHeight;
+
+        this.isTopVisible = contextScrollTop <= top && top <= contextScrollBottom;
+        this.isBottomVisible = contextScrollTop <= bottom && bottom <= contextScrollBottom;
+        this.isVisible = this.isTopVisible || this.isBottomVisible
+            || (top <= contextScrollTop && contextScrollTop <= bottom)
+            || (top <= contextScrollBottom && contextScrollBottom <= bottom);
+
+        this.onceTopVisible = this.onceTopVisible || this.isTopVisible;
+        this.onceBottomVisible = this.onceBottomVisible || this.isBottomVisible;
+        this.onceVisible = this.onceVisible || this.isVisible;
+
+        this.top = top;
+        this.bottom = bottom;
+        this.contextScrollTop = contextScrollTop;
+        this.contextScrollBottom = contextScrollBottom;
+
+        this.update_css_classes();
+    };
+
+    Behaviors.register_behavior(ScrollEffects);
+
+    function ScrollAlax() {
+        Behaviors.init(ScrollAlax, this, arguments);
+
+        this.$layers = this.$elem.find("li");
+        this.depth = this.$elem.height() * -0.5;
+
+        if (this.$elem.data('scrollalax-depthrange') === 'outside') {
+            this.anim_scale = 1;
+        } else {
+            this.anim_scale = -1;
+        }
+
+        this.weights = this.weight_layers(this.$layers);
+
+        this.on_scroll_intent();
+    }
+
+    Behaviors.inherit(ScrollAlax, ScrollEffects);
+
+    ScrollAlax.QUERY = "[data-scrollalax]";
+
+    /* Determine the weights of each layer on the parallax group. */
+    ScrollAlax.prototype.weight_layers = function ($layers) {
+        var min = Infinity, max = -Infinity, w = [];
+
+        $layers.each(function (index, elem) {
+            var depth = $(elem).data("scrollalax-depth");
+
+            if (min > depth) {
+                min = depth;
+            }
+
+            if (max < depth) {
+                max = depth;
+            }
+        }.bind(this));
+
+        $layers.each(function (index, elem) {
+            var depth = $(elem).data("scrollalax-depth");
+
+            if (this.anim_scale === -1) {
+                w.push(-1 + (depth - min) / (max - min));
+            } else {
+                w.push((depth - min) / (max - min));
+            }
+        }.bind(this));
+
+        return w;
+    }
+
+    /* Calculate X or Y positions of a layer. */
+    ScrollAlax.prototype.apply_transform_css = function(style, index, xPct, yPct) {
+        var pct_Xdrag = this.weights[index] * xPct * this.anim_scale,
+            pct_Ydrag = this.weights[index] * yPct * this.anim_scale,
+            xDisp = this.depth * pct_Xdrag * this.anim_scale,
+            yDisp = this.depth * pct_Ydrag * this.anim_scale;
+
+        //style.left = xDisp + "px";
+        //style.top = yDisp + "px";
+
+        style.transform = "translate3D(" + xDisp + "px, " + yDisp + "px, 0px)";
+    };
+
+    /* Update the scroll animation. */
+    ScrollAlax.prototype.update_css_classes = function (evt) {
+        this.$layers.each(function (index, layer_elem) {
+            var pct_down = Math.max(Math.min((this.contextScrollTop - this.top) / this.$elem.height(), 1.0), 0.0),
+                $layer_elem = $(layer_elem);
+
+            this.apply_transform_css(layer_elem.style, index, 0, pct_down);
+        }.bind(this));
+    };
+
+    Behaviors.register_behavior(ScrollAlax);
+
+    module.ScrollEffects = ScrollEffects;
+    module.ScrollAlax = ScrollAlax;
+
+    return module;
+}));
+
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -6067,6 +6088,173 @@ function searchToggle(){
 $(document).ready(function(){
     searchToggle();
 });
+/*global define, console, document, window*/
+(function (root, factory) {
+    "use strict";
+    if (typeof define === 'function' && define.amd) {
+        define("TabbedContent", ["jquery", "Behaviors"], factory);
+    } else {
+        root.TabbedContent = factory(root.jQuery, root.Behaviors);
+    }
+}(this, function ($, Behaviors) {
+    "use strict";
+
+    var module = {};
+
+    function $do(that, target) {
+        return function () {
+            target.apply(that, arguments);
+        };
+    }
+
+    function TabbedContentRegion(elem) {
+        Behaviors.init(TabbedContentRegion, this, arguments);
+
+        this.$elem = $(elem);
+        this.id = this.$elem.attr("id");
+        this.active = this.$elem.data("tabbedcontent-region-active") !== undefined;
+
+        this.links = [];
+
+        this.reflect_status();
+    }
+
+    Behaviors.inherit(TabbedContentRegion, Behaviors.Behavior);
+
+    TabbedContentRegion.QUERY = "[data-tabbedcontent-region]";
+
+    TabbedContentRegion.prototype.reflect_status = function (status) {
+        var i;
+
+        if (status === undefined) {
+            status = this.active;
+        }
+
+        if (status) {
+            this.$elem.addClass("is-TabbedContent--active");
+            this.$elem.removeClass("is-TabbedContent--inactive");
+        } else {
+            this.$elem.removeClass("is-TabbedContent--active");
+            this.$elem.addClass("is-TabbedContent--inactive");
+        }
+
+        for (i = 0; i < this.links.length; i += 1) {
+            if (status) {
+                this.links[i].addClass("is-TabbedContent--target_active");
+                this.links[i].removeClass("is-TabbedContent--target_inactive");
+            } else {
+                this.links[i].removeClass("is-TabbedContent--target_active");
+                this.links[i].addClass("is-TabbedContent--target_inactive");
+            }
+        }
+    };
+
+    TabbedContentRegion.prototype.add_incoming_link = function ($li) {
+        this.links.push($li);
+    };
+
+    function TabbedContentSet(elem) {
+        Behaviors.init(TabbedContentSet, this, arguments);
+
+        this.$elem = $(elem);
+
+        this.tabset_name = this.$elem.attr("data-tabbedcontent-set");
+        if (this.tabset_name === undefined) {
+            this.tabset_name = this.$elem.attr("id");
+        }
+
+        this.tab_members = {};
+        this.list = [];
+
+        this.find_links();
+    }
+
+    Behaviors.inherit(TabbedContentSet, Behaviors.Behavior);
+
+    TabbedContentSet.QUERY = "[data-tabbedcontent-set]";
+
+    TabbedContentSet.prototype.new_tab = function (id) {
+        var $elem = $("#" + id);
+
+        if ($elem.length === 0) {
+            return false;
+        }
+
+        if (this.tab_members[id] === undefined) {
+            this.tab_members[id] = {
+                "toggles": [],
+                "content": TabbedContentRegion.locate($elem)
+            };
+        }
+
+        return true;
+    };
+
+    TabbedContentSet.prototype.set_active_tab = function (id) {
+        var k;
+
+        for (k in this.tab_members) {
+            if (this.tab_members.hasOwnProperty(k)) {
+                this.tab_members[k].content.active = k === id;
+                this.tab_members[k].content.reflect_status();
+            }
+        }
+    };
+
+    TabbedContentSet.prototype.navigate_tab_intent = function (id, evt) {
+        this.set_active_tab(id);
+
+        if (evt) {
+            evt.preventDefault();
+        }
+    };
+
+    TabbedContentSet.prototype.import_list_item = function (li) {
+        var $li = $(li),
+            $link = $li.find("a"),
+            href = $link.attr("href"),
+            id;
+
+        if ($link.length === 0) {
+            return;
+        }
+
+        if (href.indexOf("#") !== -1) {
+            id = href.slice(1);
+        }
+
+        if (id === undefined) {
+            return;
+        }
+
+        if (this.tab_members[id] === undefined && !this.new_tab(id)) {
+            return;
+        }
+
+        this.list.push({
+            "li": $li,
+            "id": id
+        });
+        this.tab_members[id].content.add_incoming_link($li);
+        this.tab_members[id].content.reflect_status();
+        $link.on("touchend click", this.navigate_tab_intent.bind(this, id));
+    };
+
+    TabbedContentSet.prototype.find_links = function () {
+        var that = this;
+
+        this.$elem.find("li").each(function (index, elem) {
+            return that.import_list_item(elem);
+        });
+    };
+
+    Behaviors.register_behavior(TabbedContentSet);
+
+    module.TabbedContentSet = TabbedContentSet;
+
+    return module;
+}));
+
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -7188,173 +7376,6 @@ $(document).ready(function(){
     module.VideoPlayer__html5 = VideoPlayer__html5;
     module.VideoPlayer__youtube = VideoPlayer__youtube;
     module.VideoPlayer__vimeo = VideoPlayer__vimeo;
-    return module;
-}));
-
-/*global define, console, document, window*/
-(function (root, factory) {
-    "use strict";
-    if (typeof define === 'function' && define.amd) {
-        define("TabbedContent", ["jquery", "Behaviors"], factory);
-    } else {
-        root.TabbedContent = factory(root.jQuery, root.Behaviors);
-    }
-}(this, function ($, Behaviors) {
-    "use strict";
-
-    var module = {};
-
-    function $do(that, target) {
-        return function () {
-            target.apply(that, arguments);
-        };
-    }
-
-    function TabbedContentRegion(elem) {
-        Behaviors.init(TabbedContentRegion, this, arguments);
-
-        this.$elem = $(elem);
-        this.id = this.$elem.attr("id");
-        this.active = this.$elem.data("tabbedcontent-region-active") !== undefined;
-
-        this.links = [];
-
-        this.reflect_status();
-    }
-
-    Behaviors.inherit(TabbedContentRegion, Behaviors.Behavior);
-
-    TabbedContentRegion.QUERY = "[data-tabbedcontent-region]";
-
-    TabbedContentRegion.prototype.reflect_status = function (status) {
-        var i;
-
-        if (status === undefined) {
-            status = this.active;
-        }
-
-        if (status) {
-            this.$elem.addClass("is-TabbedContent--active");
-            this.$elem.removeClass("is-TabbedContent--inactive");
-        } else {
-            this.$elem.removeClass("is-TabbedContent--active");
-            this.$elem.addClass("is-TabbedContent--inactive");
-        }
-
-        for (i = 0; i < this.links.length; i += 1) {
-            if (status) {
-                this.links[i].addClass("is-TabbedContent--target_active");
-                this.links[i].removeClass("is-TabbedContent--target_inactive");
-            } else {
-                this.links[i].removeClass("is-TabbedContent--target_active");
-                this.links[i].addClass("is-TabbedContent--target_inactive");
-            }
-        }
-    };
-
-    TabbedContentRegion.prototype.add_incoming_link = function ($li) {
-        this.links.push($li);
-    };
-
-    function TabbedContentSet(elem) {
-        Behaviors.init(TabbedContentSet, this, arguments);
-
-        this.$elem = $(elem);
-
-        this.tabset_name = this.$elem.attr("data-tabbedcontent-set");
-        if (this.tabset_name === undefined) {
-            this.tabset_name = this.$elem.attr("id");
-        }
-
-        this.tab_members = {};
-        this.list = [];
-
-        this.find_links();
-    }
-
-    Behaviors.inherit(TabbedContentSet, Behaviors.Behavior);
-
-    TabbedContentSet.QUERY = "[data-tabbedcontent-set]";
-
-    TabbedContentSet.prototype.new_tab = function (id) {
-        var $elem = $("#" + id);
-
-        if ($elem.length === 0) {
-            return false;
-        }
-
-        if (this.tab_members[id] === undefined) {
-            this.tab_members[id] = {
-                "toggles": [],
-                "content": TabbedContentRegion.locate($elem)
-            };
-        }
-
-        return true;
-    };
-
-    TabbedContentSet.prototype.set_active_tab = function (id) {
-        var k;
-
-        for (k in this.tab_members) {
-            if (this.tab_members.hasOwnProperty(k)) {
-                this.tab_members[k].content.active = k === id;
-                this.tab_members[k].content.reflect_status();
-            }
-        }
-    };
-
-    TabbedContentSet.prototype.navigate_tab_intent = function (id, evt) {
-        this.set_active_tab(id);
-
-        if (evt) {
-            evt.preventDefault();
-        }
-    };
-
-    TabbedContentSet.prototype.import_list_item = function (li) {
-        var $li = $(li),
-            $link = $li.find("a"),
-            href = $link.attr("href"),
-            id;
-
-        if ($link.length === 0) {
-            return;
-        }
-
-        if (href.indexOf("#") !== -1) {
-            id = href.slice(1);
-        }
-
-        if (id === undefined) {
-            return;
-        }
-
-        if (this.tab_members[id] === undefined && !this.new_tab(id)) {
-            return;
-        }
-
-        this.list.push({
-            "li": $li,
-            "id": id
-        });
-        this.tab_members[id].content.add_incoming_link($li);
-        this.tab_members[id].content.reflect_status();
-        $link.on("touchend click", this.navigate_tab_intent.bind(this, id));
-    };
-
-    TabbedContentSet.prototype.find_links = function () {
-        var that = this;
-
-        this.$elem.find("li").each(function (index, elem) {
-            return that.import_list_item(elem);
-        });
-    };
-
-    Behaviors.register_behavior(TabbedContentSet);
-
-    module.TabbedContentSet = TabbedContentSet;
-
     return module;
 }));
 

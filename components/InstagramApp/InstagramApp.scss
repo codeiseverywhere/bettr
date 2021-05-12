@@ -64,3 +64,19 @@
         padding: 0px 150px;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .instagram-app {
+    h3 {
+      font-size: 28px;
+      line-height: 37px;
+      line-height: 37px;
+    }
+    .instaslider {
+      padding-top: 20px;
+    }
+    .slick-slider .slick-list {
+      padding: 0 80px;
+    }
+  }
+}

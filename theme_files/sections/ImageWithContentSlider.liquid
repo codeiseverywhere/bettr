@@ -7,10 +7,14 @@
               <div class="inner-slide">
                 <div class="slide-img" style="background-image: url({{ block.settings.image | img_url: 'master' }});"></div>
                 <div class="slide-content">
-                  <p class="p-lg">{{ block.settings.content  }}</p>
-                  {% if block.settings.askedby %}
-                    <span class="sm-p">@{{ block.settings.askedby  }}</span>
-                  {% endif %}
+                  <div class="slide-inner">
+
+                    <p class="p-lg">{{ block.settings.content  }}</p>
+                    {% if block.settings.askedby %}
+                      <span class="sm-p">@{{ block.settings.askedby  }}</span>
+                    {% endif %}
+                    
+                  </div>
                 </div>
               </div>  
             </div>
@@ -19,6 +23,9 @@
     </div> 
 </div>
 {% endif %}
+
+
+
 {% schema %}
   {
     "name": "Photo Content Slider",
@@ -62,4 +69,5 @@
     ]
   }
 {% endschema %}
+
 

@@ -14,6 +14,10 @@
      fade: true,
    });
 
+  var lastnumb = $('.imgcontentslider .slick-dots li:last-child button').html();
+  var lastSpan = '<span>'+lastnumb+'</span>';
+  $('.imgcontentslider .slick-dots li:last-child').append(lastSpan);
+
   });
   
 }());
